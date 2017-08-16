@@ -101,36 +101,40 @@ with open(fileNameDriverDirectory,'r',newline = '') as myFile:
 ############################
 #Beginn Bearbeitung der Daten
 
-#Wandle die Daten aus dem Eingabeformat um in ein einfach zu bearbeitendes Berechnungsformat um und berechne die Kosten jedes Eintrages
+#Wandle die Daten aus dem Eingabeformat um in ein Ausgabeformat mit berechneter Dauer und berechneten Kosten
 calcData = []
 beginStringFormat = ''
 for data in inputData:
     name = data[ columns['driverName'] ]
     begin = calculateDuration( year = year, month = month, dateBeginStrZfilled2Numbers = data[ columns['dateBegin'] ].zfill(2), timeBeginStrT4Numbers = data[ columns['timeBegin'] ])
     end = calculateDuration( year = year, month = month, dateBeginStrZfilled2Numbers = data[ columns['dateEnd'] ].zfill(2), timeBeginStrT4Numbers = data[ columns['timeEnd'] ])
+    carName = data[ columns['carName']  ]
+    duration =  ((end-begin).total_seconds()) / (60*60) #Dauer in Stunden
     distance = int(data[ columns['distance'] ])
-    cost = calculateCost( distance , ((end-begin).total_seconds()) / (60*60) )
-    beginString = begin.strftime('%Y%m%d')
-    calcData.append([name, beginString, distance, cost])
+    cost = calculateCost( distance , duration )
+    
+    calcData.append([name, begin, carName, duration, distance, cost])
 
 #Ordne die einzelnen Fahrteintraege den Fahrern zu
 
+#Sortiere calcData nach Fahrer und dann nach Startzeitpunkten
+calcData.sort(key = lambda x: (x[0] , x[1] ) )
 
+#Ersetze den Eintrag begin (datetime object) mit einem String
+for data in calcData:
+    data[1] = data[1].strftime('%d %m %Y')
+uniqueDrivers = set( map(lambda x:x[0], calcData) )
 
-
-
-
-
-
-
-
-
-
-
-
+#Erstelle eine Ausgabeliste, die fuer jeden Fahrer eine Liste der Eintraege in enthaelt. Diese Liste der Eintraege ist schon geordnet
+outData = []
+for driver in uniqueDrivers:
+    outData.append( [ x for x in calcData if x[0] == driver ] )
 
 #Ende Bearbeitung der Daten
 ############################
+
+############################
+#Beginn Erstellung der Ausgabedateien
 
 
 
