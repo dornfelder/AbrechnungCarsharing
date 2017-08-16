@@ -123,6 +123,7 @@ calcData.sort(key = lambda x: (x[0] , x[1] ) )
 #Ersetze den Eintrag begin (datetime object) mit einem String
 for data in calcData:
     data[1] = data[1].strftime('%d %m %Y')
+#Erstelle eine Liste der im betrachteten Monat aktiven Fahrer ausgehend von den Fahrdaten
 uniqueDrivers = set( map(lambda x:x[0], calcData) )
 
 #Erstelle eine Ausgabeliste, die fuer jeden Fahrer eine Liste der Eintraege in enthaelt. Diese Liste der Eintraege ist schon geordnet
