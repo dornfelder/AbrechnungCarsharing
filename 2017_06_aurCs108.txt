@@ -1,3 +1,4 @@
+#Legende: Kurzer Fahrername fuer die Dateneingabe;Tag Beginn der Fahrt;Zeit Beginn der Fahrt;Gefahrene Kilometer;Tag Ende der Fahrt; Zeit Ende der Fahrt
 Julian;1;0100;21;1;1100
 Julian;2;0200;22;2;1200
 Julian;3;0300;23;3;1300
