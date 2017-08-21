@@ -1,6 +1,9 @@
 import csv
 from datetime import datetime,timedelta
 import sys
+import os
+import subprocess
+import string
 ############################
 #Beginn Nutzereingabe
 
@@ -12,6 +15,8 @@ month = 6
 carNames = ['aurCs108']
 #Gebe den Namen des Fahrerverzeichnisses ein
 fileNameDriverDirectory = '2017_06_fahrer.txt'
+#Gebe den Namen der Latexvorlage ein
+fileNameLatexTemplate = 'template4Python.tex'
 
 
 #Gebe das Erstelldatum der Abrechnung ein
@@ -56,6 +61,29 @@ def gerMonthNames(integerMonth):
         sys.exit('Der Parameter zu gerMonthNames ist kein Integer im Bereich 1 bis 12')
     return tmp
 
+def formatOutData(tripList):
+    delimiterLatexTable = '&'
+    endLineLatexTable = r'\\\hline'
+    tmpStr = ''
+    lastIndex = len(tripList)-1
+    for index,entry in enumerate(tripList):
+        tmpStr = tmpStr \
+            + entry[columnsCalcData['date']] + delimiterLatexTable \
+            + entry[columnsCalcData['carName']] + delimiterLatexTable \
+            + str( entry[columnsCalcData['duration']] )+ delimiterLatexTable \
+            + str( entry[columnsCalcData['distance']] )+ delimiterLatexTable \
+            + str( entry[columnsCalcData['cost']] )
+        if(index != lastIndex):
+            tmpStr = tmpStr + endLineLatexTable + '\n'
+    return tmpStr
+#columnsCalcData = {
+#'driverName'    :0,
+#'date'          :1,
+#'carName'       :2,
+#'duration'      :3,
+#'distance'      :4,
+#'cost'          :5
+#}
 
 #Ende Definition Funktionen
 ############################
@@ -130,7 +158,14 @@ for data in inputData:
     cost = calculateCost( distance , duration )
     
     calcData.append([name, begin, carName, duration, distance, cost])   #cost is last entry
-
+columnsCalcData = {
+'driverName'    :0,
+'date'          :1,
+'carName'       :2,
+'duration'      :3,
+'distance'      :4,
+'cost'          :5
+}
 #Ordne die einzelnen Fahrteintraege den Fahrern zu
 
 #Sortiere calcData nach Fahrer und dann nach Startzeitpunkten
@@ -162,6 +197,7 @@ for driver in uniqueDrivers:
 toTemplate = {}
 for driver in uniqueDrivers:
     tmp = {}
+    tmp['settlementDate'] = settlementDate
     tmp['month']    =   (gerMonthNames(month))
     tmp['year']     =   str(year)
     tmp['sum']      =   str(toTemplateSums[driver])
@@ -171,11 +207,55 @@ for driver in uniqueDrivers:
     tmp['streetNumber'] =   driverData[driver][columnsDriver['streetNumber']]
     tmp['postcode'] =   driverData[driver][columnsDriver['postcode']]
     tmp['city'] =   driverData[driver][columnsDriver['city']]
-
+    tmp['table'] = formatOutData( outData[driver] )
     #table data has to be added.
-    toTemplate[driver] = tmp 
+    toTemplate[driver] = tmp
+
+#Read template4Python into variable
+with open(fileNameLatexTemplate,'r', newline='') as myFile:
+    templateStr = myFile.read()
 
 
+class latexTemplate(string.Template):
+    delimiter = "##"
+
+
+class cd:
+    """Context manager for changing the current working directory"""
+    def __init__(self, newPath):
+        self.newPath = os.path.expanduser(newPath)
+
+    def __enter__(self):
+        self.savedPath = os.getcwd()
+        os.chdir(self.newPath)
+
+    def __exit__(self, etype, value, traceback):
+        os.chdir(self.savedPath)
+
+toFileLatex = latexTemplate(templateStr)
+
+#print(toFileLatex.substitute(**toTemplate['Alex']) )
+dirName = '{}_{}'.format( str(year),str(month).zfill(2))
+if not os.path.exists(dirName):
+    os.makedirs(dirName)
+
+for driver in uniqueDrivers:
+    fileName = os.path.join(os.getcwd(), dirName ,'{}.tex'.format( driver ) )
+    with open( fileName , 'w' ,newline = '\n') as myFile:
+        myFile.write(toFileLatex.substitute(**toTemplate[driver]))
+    with cd( os.path.join(os.getcwd(), dirName) ):
+        cmd = ['pdflatex', '-interaction', 'nonstopmode', fileName]
+        proc = subprocess.Popen(cmd)
+        proc.communicate()
+
+
+
+    
+
+
+#cmd = ['pdflatex', '-interaction', 'nonstopmode', 'cover.tex']
+#proc = subprocess.Popen(cmd)
+#proc.communicate()
 
 
 #Ende Bearbeitung der Daten
