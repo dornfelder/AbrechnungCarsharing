@@ -70,7 +70,7 @@
 \setkomavar{frombank}{Car Sharing Aurich e.V.; Amtsgericht Aurich Registerblatt VR 681\\
 Bankverbindung: Raiffeisen Volksbank eG; BLZ: 285 622 97; Konto: 444 101 000}
 
-\date{ 18 August 2017 } % Date of the letter
+\date{ ##settlementDate } % Date of the letter
 
 %----------------------------------------------------------------------------------------
  
@@ -80,12 +80,12 @@ Bankverbindung: Raiffeisen Volksbank eG; BLZ: 285 622 97; Konto: 444 101 000}
 %	ADDRESSEE
 %----------------------------------------------------------------------------------------
  
-\begin{letter}{ Alexandra Seregely \\ Eickebuscher Weg 29\\ 26603 Aurich } % Addressee name and address
+\begin{letter}{ ##firstName ##lastName \\ ##street ##streetNumber\\ ##postcode ##city } % Addressee name and address
 
 %----------------------------------------------------------------------------------------
 %	LETTER CONTENT
 %---------------------------------------------------------------------------------------
-\setkomavar{subject}{\bf{Monatsabrechnung Juni 2017}}
+\setkomavar{subject}{\bf{Monatsabrechnung ##month ##year}}
 
 \opening{Moin,}
 
@@ -107,10 +107,9 @@ Dabei ist der nachfolgend aufgeführte Aufwand entstanden, welcher von Ihrem Kon
 \begin{tabular}{ | c | c | c | c | c | c | c | c | c | }
 \hline
 Datum & Fahrzeug & Dauer [h] & Berechnete Kilometer [km]& Kosten [\euro{}]\\ \hline
-04 06 2017&aurCs108&34.0&24&25.0\\\hline
-07 06 2017&aurCs108&10.0&27&13.5\\
+##table\\
 \hhline{|-|-|-|-|=|}
-\multicolumn{4}{|r|}{Summe:} &38.5\\\hline
+\multicolumn{4}{|r|}{Summe:} &##sum\\\hline
 \end{tabular}
 
 

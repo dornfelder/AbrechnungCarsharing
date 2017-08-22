@@ -1,0 +1,3 @@
+#Legende: Kurzer Fahrername fuer die Dateneingabe; Vorname; Nachname;Strasse;Hausnummer;Postleitzahl;Ort
+Julian;Julian;Bauer;Eickererbuscher Weg;29a;26603;Aurich
+Alex;Alexandra;Seregely;Eickebuscher Weg;29;26603;Aurich
