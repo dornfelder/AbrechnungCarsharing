@@ -11,6 +11,10 @@ import string
 year = 2017
 #Gebe den zu bearbeitenden Monat ein
 month = 6
+#Gebe den Namen des Ausgabeverzeichnisses an
+outputDirectory = './output'
+#Gebe den Namen eines Verzeichnisses an, das die Fahrdaten der einzelnen Autos beinhaltet
+dataDirectory = './input'
 #Gebe eine Liste von Autobezeichnungen an, die bearbeitet werden sollen
 carNames = ['aurCs108']
 #Gebe den Namen des Fahrerverzeichnisses ein
@@ -69,10 +73,10 @@ def formatOutData(tripList):
     for index,entry in enumerate(tripList):
         tmpStr = tmpStr \
             + entry[columnsCalcData['date']] + delimiterLatexTable \
-            + entry[columnsCalcData['carName']] + delimiterLatexTable \
-            + str( entry[columnsCalcData['duration']] )+ delimiterLatexTable \
-            + str( entry[columnsCalcData['distance']] )+ delimiterLatexTable \
-            + str( entry[columnsCalcData['cost']] )
+            + entry[columnsCalcData['carName']].upper() + delimiterLatexTable \
+            + '{:.2f}'.format( entry[columnsCalcData['duration']] )+ delimiterLatexTable \
+            + '{:.2f}'.format( entry[columnsCalcData['distance']] )+ delimiterLatexTable \
+            + '{:.2f}'.format( entry[columnsCalcData['cost']] )
         if(index != lastIndex):
             tmpStr = tmpStr + endLineLatexTable + '\n'
     return tmpStr
@@ -111,7 +115,7 @@ columns = {
 #Lese Daten aus den Eingabedateien ein
 inputData = []
 for index,filename in enumerate(fileNames):
-    with open(filename,'r', newline='') as myFile:
+    with open(os.path.join(dataDirectory,filename),'r', newline='') as myFile:
         next(myFile)    #Skip Header
         myReader = csv.reader(myFile, delimiter = ';')
         #Strip input, d.h. entferne Leerzeichen und Zeilenspruenge aus den Strings
@@ -228,7 +232,7 @@ class latexTemplate(string.Template):
 toFileLatex = latexTemplate(templateStr)
 
 #print(toFileLatex.substitute(**toTemplate['Alex']) )
-dirName = '{}_{}'.format( str(year),str(month).zfill(2))
+dirName = os.path.join(outputDirectory, '{}_{}'.format( str(year),str(month).zfill(2)) )
 if not os.path.exists(dirName):
     os.makedirs(dirName)
 
