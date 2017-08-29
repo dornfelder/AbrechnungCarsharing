@@ -36,11 +36,13 @@ settlementDate = '18 August 2017'
 def calculateCost( distance , duration):
     #[distance] = km
     #[duration] = h
-    #Es gibt zwei Kilometerpreise. rate_1 gilt bis zu einer Fahrtstrecke von distanceForRate1, danach gilt rate_2
+    #Es gibt zwei Kilometerpreise. rate_1 gilt bis zu einer Fahrtstrecke 
+    #von distanceForRate1, danach gilt rate_2
     rate_1 = 0.5   #[Euro / km]
     rate_2 = 0.25  #[Euro / km]
-    distanceForRate1 = 140  #[km]
-    #Ab einer Zeitdauer von highDuration gibt es einen Mindestpreis, der sich aus einer Mindeststrecke highDurationDistance berechnet.
+    distanceForRate1 = 150  #[km]
+    #Ab einer Zeitdauer von highDuration gibt es einen Mindestpreis, 
+    #der sich aus einer Mindeststrecke highDurationDistance berechnet.
     highDuration = 24 #[h]
     highDurationDistance = 50 #[km]
     if(distance <= distanceForRate1):
@@ -127,8 +129,8 @@ for index,filename in enumerate(fileNames):
 #!#ImprovementNote:driverData should be organiszed as dictionary and reused when toTemplate is created.
 columnsDriver = {
 'driverName'    :0,
-'firstName'     :1,
-'lastName'      :2,
+'lastName'      :1,
+'firstName'     :2,
 'street'        :3,
 'streetNumber'  :4,
 'postcode'      :5,
