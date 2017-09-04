@@ -54,8 +54,14 @@ def calculateCost( distance , duration):
     return tmp
 
 
-def calculateDuration( year, month, dateBeginStrZfilled2Numbers, timeBeginStrT4Numbers ):
-    return datetime.strptime( str(year)+str(month).zfill(2)+ dateBeginStrZfilled2Numbers + timeBeginStrT4Numbers,'%Y%m%d%H%M' )
+def calculateDate( year, month, dateStrZfilled2Numbers, timeStr4Numbers ):
+    #Gueltge Uhrzeiten sind im Bereich 0000 bis 2359
+    #Falls die Uhrzeit 2400 betraegt, ist der passende Tag zu inkrementieren und die Uhrzeit ist auf 2359 zu setzen
+    if timeStr4Numbers == '2400':
+        tmp = datetime.strptime( str(year)+str(month).zfill(2)+ dateStrZfilled2Numbers + '0000','%Y%m%d%H%M' )+timedelta(days = 1)
+    else:
+        tmp = datetime.strptime( str(year)+str(month).zfill(2)+ dateStrZfilled2Numbers + timeStr4Numbers,'%Y%m%d%H%M' )
+    return tmp 
 
 def gerMonthNames(integerMonth):
     #Gebe den deutschen Monatsbezeichner als String zurueck
@@ -158,8 +164,8 @@ calcData = []
 beginStringFormat = ''
 for data in inputData:
     name = data[ columns['driverName'] ]
-    begin = calculateDuration( year = year, month = month, dateBeginStrZfilled2Numbers = data[ columns['dateBegin'] ].zfill(2), timeBeginStrT4Numbers = data[ columns['timeBegin'] ])
-    end = calculateDuration( year = year, month = month, dateBeginStrZfilled2Numbers = data[ columns['dateEnd'] ].zfill(2), timeBeginStrT4Numbers = data[ columns['timeEnd'] ])
+    begin = calculateDate( year = year, month = month, dateStrZfilled2Numbers = data[ columns['dateBegin'] ].zfill(2), timeStr4Numbers = data[ columns['timeBegin'] ])
+    end = calculateDate( year = year, month = month, dateStrZfilled2Numbers = data[ columns['dateEnd'] ].zfill(2), timeStr4Numbers = data[ columns['timeEnd'] ])
     carName = data[ columns['carName']  ]
     duration =  ((end-begin).total_seconds()) / (60*60) #Dauer in Stunden
     distance = int(data[ columns['distance'] ])
