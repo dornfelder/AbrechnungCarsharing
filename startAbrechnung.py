@@ -80,22 +80,14 @@ def formatOutData(tripList):
     lastIndex = len(tripList)-1
     for index,entry in enumerate(tripList):
         tmpStr = tmpStr \
-            + entry[columnsCalcData['date']] + delimiterLatexTable \
-            + entry[columnsCalcData['carName']].upper() + delimiterLatexTable \
-            + '{:.2f}'.format( entry[columnsCalcData['duration']] )+ delimiterLatexTable \
-            + '{:.2f}'.format( entry[columnsCalcData['distance']] )+ delimiterLatexTable \
-            + '{:.2f}'.format( entry[columnsCalcData['cost']] )
+            + entry['date'] + delimiterLatexTable \
+            + entry['carName'].upper() + delimiterLatexTable \
+            + '{:.2f}'.format( entry['duration'] )+ delimiterLatexTable \
+            + '{:.2f}'.format( entry['distance'] )+ delimiterLatexTable \
+            + '{:.2f}'.format( entry['cost'] )
         if(index != lastIndex):
             tmpStr = tmpStr + endLineLatexTable + '\n'
     return tmpStr
-#columnsCalcData = {
-#'driverName'    :0,
-#'date'          :1,
-#'carName'       :2,
-#'duration'      :3,
-#'distance'      :4,
-#'cost'          :5
-#}
 
 #Ende Definition Funktionen
 ############################
@@ -108,49 +100,33 @@ def formatOutData(tripList):
 delimiterFileNames = '_'
 fileNames = [str(year) + delimiterFileNames +str(month).zfill(2) + delimiterFileNames +carName+'.txt' for carName in carNames]
 
-#Definiere Indices fuer verschiedene Datenbestandteile in den Eingabedateien
-#!#ImprovementNote:inputData should be organiszed as dictionary and reused when toTemplate is created.
-columns = {
-'driverName'    :0,
-'dateBegin' :1,
-'timeBegin' :2,
-'distance'  :3,
-'dateEnd'   :4,
-'timeEnd'   :5,
-'carName'   :6
-}
-
+#Definiere Keys fuer verschiedene Datenbestandteile in den Eingabedateien
+keysInputData = ['driverName','dateBegin','timeBegin','distance','dateEnd','timeEnd']
 #Lese Daten aus den Eingabedateien ein
 inputData = []
 for index,filename in enumerate(fileNames):
     with open(os.path.join(dataDirectory,filename),'r', newline='') as myFile:
         next(myFile)    #Skip Header
-        myReader = csv.reader(myFile, delimiter = ';')
+        myReader = csv.DictReader(myFile, keysInputData, delimiter = ',')
         #Strip input, d.h. entferne Leerzeichen und Zeilenspruenge aus den Strings
         for data in myReader:
-            inputData.append( [x.strip() for x in data] )
-            inputData[-1].append(carNames[index])   #Fuege den Aktuellen Fahrzeugnamen zu jedem Eintrag in inputData hinzu
+            if data:    #only append driverData if data is not empty list
+                inputData.append( { key : value.strip() for key,value in data.items() } )
+                inputData[-1]['carName'] = carNames[index]   #Fuege den Aktuellen Fahrzeugnamen zu jedem Eintrag in inputData hinzu
 
-#Definiere Indices fuer verschiedene Datenbestandteile in dem Fahrerverzeichnis
-#!#ImprovementNote:driverData should be organiszed as dictionary and reused when toTemplate is created.
-columnsDriver = {
-'driverName'    :0,
-'lastName'      :1,
-'firstName'     :2,
-'street'        :3,
-'streetNumber'  :4,
-'postcode'      :5,
-'city'          :6
-}
 
+#Definiere Keys fuer verschiedene Datenbestandteile in dem Fahrerverzeichnis
+keysDriver = ['driverName', 'firstName','lastName','street','streetNumber','postcode','city']
 #Lese das Fahrerverzeichnis ein
 driverData = {}
 with open(fileNameDriverDirectory,'r',newline = '') as myFile:
     next(myFile)    #Skip Header
-    myReader = csv.reader(myFile,delimiter = ';')
+    myReader = csv.DictReader(myFile,keysDriver,delimiter = ',')
     #Strip input, d.h. entferne Leerzeichen und Zeilenspruenge aus den Strings
     for data in myReader:
-        driverData[data[0]] = [x.strip() for x in data]
+        if data:    #only append data to driverData if data is not empty list
+            driverData[data['driverName']] = { key : value.strip() for key,value in data.items()}
+
 
 #Ende Einlesen der Rohdaten
 ############################
@@ -159,57 +135,43 @@ with open(fileNameDriverDirectory,'r',newline = '') as myFile:
 #Beginn Bearbeitung der Daten
 
 #Wandle die Daten aus dem Eingabeformat um in ein Ausgabeformat mit berechneter Dauer und berechneten Kosten
-#!#ImprovementNote:Design calcData as Dictionary
 calcData = []
 beginStringFormat = ''
 for data in inputData:
-    name = data[ columns['driverName'] ]
-    begin = calculateDate( year = year, month = month, dateStrZfilled2Numbers = data[ columns['dateBegin'] ].zfill(2), timeStr4Numbers = data[ columns['timeBegin'] ])
-    end = calculateDate( year = year, month = month, dateStrZfilled2Numbers = data[ columns['dateEnd'] ].zfill(2), timeStr4Numbers = data[ columns['timeEnd'] ])
-    carName = data[ columns['carName']  ]
+    name = data[ 'driverName' ]
+    begin = calculateDate( year = year, month = month, dateStrZfilled2Numbers = data[ 'dateBegin' ].zfill(2), timeStr4Numbers = data[ 'timeBegin' ])
+    end = calculateDate( year = year, month = month, dateStrZfilled2Numbers = data[ 'dateEnd' ].zfill(2), timeStr4Numbers = data[ 'timeEnd' ])
+    carName = data[ 'carName' ]
     duration =  ((end-begin).total_seconds()) / (60*60) #Dauer in Stunden
-    distance = int(data[ columns['distance'] ])
+    distance = int(data[ 'distance' ])
     cost = calculateCost( distance , duration )
     
-    calcData.append([name, begin, carName, duration, distance, cost])   #cost is last entry
-columnsCalcData = {
-'driverName'    :0,
-'date'          :1,
-'carName'       :2,
-'duration'      :3,
-'distance'      :4,
-'cost'          :5
-}
+    calcData.append({'driverName' :name, 'date':begin, 'carName':carName, 'duration':duration, 'distance':distance, 'cost':cost})
 #Ordne die einzelnen Fahrteintraege den Fahrern zu
 
 #Sortiere calcData nach Fahrer und dann nach Startzeitpunkten
-#!#ImprovementNote:Adjust to use dictionary
-calcData.sort(key = lambda x: (x[0] , x[1] ) )
+calcData.sort(key = lambda x: (x['driverName'] , x['date'] ) )
 
 #Ersetze den Eintrag begin (datetime object) mit einem String
-#!#ImprovementNote: entry 'date' of calcData as string straight away from the beginning
 for data in calcData:
-    data[1] = data[1].strftime('%d %m %Y')
+    data['date'] = data['date'].strftime('%d %m %Y')
 
 #Erstelle eine Liste der im betrachteten Monat aktiven Fahrer ausgehend von den Fahrdaten
-#!#ImprovementNote:Adjust to use dictionary
-uniqueDrivers = list(set( map(lambda x:x[0], calcData) ))
+uniqueDrivers = list(set( map(lambda x:x['driverName'], calcData) ))
 uniqueDrivers.sort()
 
 #Erstelle eine Ausgabeliste, die fuer jeden Fahrer eine Liste der Eintraege enthaelt. 
 #Diese Liste der Eintraege ist schon geordnet
-#!#ImprovementNote:Adjust to use dictionary
 outData = {}
 for driver in uniqueDrivers:
-    outData[driver] =  [ x for x in calcData if x[0] == driver ]
+    outData[driver] =  [ x for x in calcData if x['driverName'] == driver ]
 
 #Summiere die Kosten jedes Fahrers
-#!#ImprovementNote:Adjust to use dictionary
 toTemplateSums = {}
 for driver in uniqueDrivers:
     tmp = 0
     for data in outData[driver]:
-        tmp = tmp + data[-1]    #cost is last entry
+        tmp = tmp + data['cost']    #cost is last entry
     toTemplateSums[driver] = tmp
 
 #Erstelle ein Dictinonary von Dictionaries um Platzhalter in der Vorlage zu ersetzen
@@ -220,12 +182,12 @@ for driver in uniqueDrivers:
     tmp['month']    =   (gerMonthNames(month))
     tmp['year']     =   str(year)
     tmp['sum']      =   str(toTemplateSums[driver])
-    tmp['firstName']=   driverData[driver][columnsDriver['firstName']]
-    tmp['lastName'] =   driverData[driver][columnsDriver['lastName']]
-    tmp['street'] =   driverData[driver][columnsDriver['street']]
-    tmp['streetNumber'] =   driverData[driver][columnsDriver['streetNumber']]
-    tmp['postcode'] =   driverData[driver][columnsDriver['postcode']]
-    tmp['city'] =   driverData[driver][columnsDriver['city']]
+    tmp['firstName']=   driverData[driver]['firstName']
+    tmp['lastName'] =   driverData[driver]['lastName']
+    tmp['street'] =   driverData[driver]['street']
+    tmp['streetNumber'] =   driverData[driver]['streetNumber']
+    tmp['postcode'] =   driverData[driver]['postcode']
+    tmp['city'] =   driverData[driver]['city']
     tmp['table'] = formatOutData( outData[driver] )
     #table data has to be added.
     toTemplate[driver] = tmp
