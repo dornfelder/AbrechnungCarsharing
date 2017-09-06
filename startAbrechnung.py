@@ -7,29 +7,45 @@ import string
 ############################
 #Beginn Nutzereingabe
 
+#Workflow:
+#1. Erstelle im Verzeichnis 'input' ein Unterverzeichnis nach dem Beispielformat "2017_06".
+#2. In diesem Unterverzeichnis erstelle fuer jedes Fahrzeug eine Datei im Format "aurCs108.txt"
+#   mit Dateiendung ".txt" und einem Namen, der in der Abrechnugnsauflistugn als Fahrzeugkuerzel
+#   verwendet werden kann.
+#3. Aktualisiere gegebenfalls das Fahrerverzeichnis "fahrerverzeichnis.txt"
+#4. Gib im nachfolgenden Bereich der Nutzereingabe das Jahr und den Monat der zu bearbeitenden Daten ein.
+#5- Gib im nachfolgenden Bereich der Nutzereingabe das Erstelldatum der Abrechnung ein.
+#6  Fuehre dieses Skript aus.
+
 #Gebe das Jahr des zu bearbeitenden Monats ein
 year = 2017
 #Gebe den zu bearbeitenden Monat ein
 month = 6
-#Gebe den Namen des Ausgabeverzeichnisses an
-outputDirectory = './output'
-#Gebe den Namen eines Verzeichnisses an, das die Fahrdaten der einzelnen Autos beinhaltet
-dataDirectory = './input'
-#Gebe eine Liste von Autobezeichnungen an, die bearbeitet werden sollen
-carNames = ['aurCs108']
-#Gebe den Namen des Fahrerverzeichnisses ein
-fileNameDriverDirectory = 'fahrerverzeichnis.txt'
-#Gebe den Namen der Latexvorlage ein
-fileNameLatexTemplate = './templates/template4Python.tex'
-
-
 #Gebe das Erstelldatum der Abrechnung ein
 settlementDate = '18 August 2017'
 
 #Ende Nutzereingabe
 ############################
+############################
+#Beginn Eingaben eines sonderbaren Nutzers
 
+#Gebe den Namen eines Verzeichnisses an, das die Fahrdaten der einzelnen Autos beinhaltet
+# Die Dateinamen ohen Dateiendung in diesem Verzeichnis werden als Bezeichner der Autos in der Abrechnung verwendet.
+inputDirectory = 'input/{}_{}'.format( str(year), str(month).zfill(2))
+print('Das Eingabeverzeichnis lautet \n"{}"'.format(inputDirectory) )
+#Gebe eine Dateiendung ein, die alle Dateien mit Fahrtinformationen im Inputverzeichnis tragen.
+fileEnding = '.txt'
+#Gebe den Namen des Ausgabeverzeichnisses an
+outputDirectory = 'output/{}_{}'.format( str(year), str(month).zfill(2))
+#Gebe den Namen einer Latex-Logdatei an, die im Ausgabeverzeichnis erstellt wird
+fileNameLatexLog = 'latexLog.txt'
+#Gebe den Namen des Fahrerverzeichnisses ein
+fileNameDriverDirectory = 'fahrerverzeichnis.txt'
+#Gebe den Namen der Latexvorlage ein
+fileNameLatexTemplate = './templates/template4Python.tex'
 
+#Ende Eingaben eines sonderbaren Nutzers
+############################
 ############################
 #Beginn Definition Funktionen
 
@@ -48,7 +64,8 @@ def calculateCost( distance , duration):
     if(distance <= distanceForRate1):
         tmp = distance * rate_1
     else:
-        tmp = distanceForRate1 * rate_1 + (distance - distanceForRate1) * rate_2
+        #tmp = distanceForRate1 * rate_1 + (distance - distanceForRate1) * rate_2
+        tmp = distance * rate_2
     if(highDuration <= duration):
         tmp = max( [tmp , highDurationDistance * rate_1] )
     return tmp
@@ -89,6 +106,16 @@ def formatOutData(tripList):
             tmpStr = tmpStr + endLineLatexTable + '\n'
     return tmpStr
 
+class cd:
+    """Context manager for changing the current working directory"""
+    def __init__(self, newPath):
+        self.newPath = os.path.expanduser(newPath)
+    def __enter__(self):
+        self.savedPath = os.getcwd()
+        os.chdir(self.newPath)
+    def __exit__(self, etype, value, traceback):
+        os.chdir(self.savedPath)
+
 #Ende Definition Funktionen
 ############################
 
@@ -96,24 +123,40 @@ def formatOutData(tripList):
 ############################
 #Beginn Einlesen der Rohdaten
 
-#Erstellle eine Liste von Dateinamen ausgehend von den Benutzereingaben
-delimiterFileNames = '_'
-fileNames = [str(year) + delimiterFileNames +str(month).zfill(2) + delimiterFileNames +carName+'.txt' for carName in carNames]
+#Erstelle eine Liste von Dateinamen der Dateien, 
+#   die sich im Inputverzeichnis befinden und eine bestimmte Endung aufweisen
+#Erstelle eine Liste von Namen von Autos, der sich aus den Dateinamen ohne die bestimmte Endung ergibt
+fileNames = []
+carNames = []
+for file in os.listdir(os.path.join(os.getcwd(), inputDirectory)):
+    if file.endswith(fileEnding):
+        #print(os.path.join(os.path.join(os.getcwd(), inputDirectory), file))
+        fileNames.append(file)
+        carNames.append(file.replace(fileEnding,''))
+
+
 
 #Definiere Keys fuer verschiedene Datenbestandteile in den Eingabedateien
 keysInputData = ['driverName','dateBegin','timeBegin','distance','dateEnd','timeEnd']
 #Lese Daten aus den Eingabedateien ein
+nbrEntriesInputData = []
 inputData = []
 for index,filename in enumerate(fileNames):
-    with open(os.path.join(dataDirectory,filename),'r', newline='') as myFile:
+    with open(os.path.join(inputDirectory,filename),'r', newline='') as myFile:
         next(myFile)    #Skip Header
         myReader = csv.DictReader(myFile, keysInputData, delimiter = ',')
-        #Strip input, d.h. entferne Leerzeichen und Zeilenspruenge aus den Strings
+        myCount = 0
         for data in myReader:
             if data:    #only append driverData if data is not empty list
+                #Strip input, d.h. entferne Leerzeichen und Zeilenspruenge aus den Strings
                 inputData.append( { key : value.strip() for key,value in data.items() } )
                 inputData[-1]['carName'] = carNames[index]   #Fuege den Aktuellen Fahrzeugnamen zu jedem Eintrag in inputData hinzu
+                myCount += 1
+        nbrEntriesInputData.append(myCount)
 
+print('und enthaelt folgende Eingabedateien (Anzahl der Eintraege pro Datei)')
+for index, name in enumerate(fileNames):
+    print('\t'+name+'\t'+'('+str(nbrEntriesInputData[index])+')')
 
 #Definiere Keys fuer verschiedene Datenbestandteile in dem Fahrerverzeichnis
 keysDriver = ['driverName', 'firstName','lastName','street','streetNumber','postcode','city']
@@ -159,6 +202,9 @@ for data in calcData:
 #Erstelle eine Liste der im betrachteten Monat aktiven Fahrer ausgehend von den Fahrdaten
 uniqueDrivers = list(set( map(lambda x:x['driverName'], calcData) ))
 uniqueDrivers.sort()
+print('Folgende Fahrer sind im betrachteten Zeitraum aktiv:')
+for driver in uniqueDrivers:
+    print('\t'+driver)
 
 #Erstelle eine Ausgabeliste, die fuer jeden Fahrer eine Liste der Eintraege enthaelt. 
 #Diese Liste der Eintraege ist schon geordnet
@@ -171,7 +217,7 @@ toTemplateSums = {}
 for driver in uniqueDrivers:
     tmp = 0
     for data in outData[driver]:
-        tmp = tmp + data['cost']    #cost is last entry
+        tmp = tmp + data['cost']
     toTemplateSums[driver] = tmp
 
 #Erstelle ein Dictinonary von Dictionaries um Platzhalter in der Vorlage zu ersetzen
@@ -192,43 +238,38 @@ for driver in uniqueDrivers:
     #table data has to be added.
     toTemplate[driver] = tmp
 
-#Read template4Python into variable
+#Lese die Vorlage template4Python in eine Variable
 with open(fileNameLatexTemplate,'r', newline='') as myFile:
     templateStr = myFile.read()
 
+#Erstelle ein Python String Template Objekt mti gewuenschtem Trennzeichen
 class latexTemplate(string.Template):
     delimiter = "##"
-
 toFileLatex = latexTemplate(templateStr)
 
-#print(toFileLatex.substitute(**toTemplate['Alex']) )
-dirName = os.path.join(outputDirectory, '{}_{}'.format( str(year),str(month).zfill(2)) )
-if not os.path.exists(dirName):
-    os.makedirs(dirName)
+#Erstelle das Ausgabeverzeichnis
+outDir = os.path.join( os.getcwd(), outputDirectory )
+if not os.path.exists(outDir):
+    os.makedirs(outDir)
 
-class cd:
-    """Context manager for changing the current working directory"""
-    def __init__(self, newPath):
-        self.newPath = os.path.expanduser(newPath)
-
-    def __enter__(self):
-        self.savedPath = os.getcwd()
-        os.chdir(self.newPath)
-
-    def __exit__(self, etype, value, traceback):
-        os.chdir(self.savedPath)
-
+#Erstelle eine Liste von endungen unnoetiger Dateien
 uselessFilesEndings = ['.tex','.aux','.log']
-for driver in uniqueDrivers:
-    fileName = os.path.join(os.getcwd(), dirName ,'{}.tex'.format( driver ) )
-    with open( fileName , 'w' ,newline = '\n') as myFile:
-        myFile.write(toFileLatex.substitute(**toTemplate[driver]))
-    with cd( os.path.join(os.getcwd(), dirName) ):
-        cmd = ['pdflatex', '-interaction', 'nonstopmode', fileName]
-        proc = subprocess.Popen(cmd)
-        proc.communicate()
-        for ending in uselessFilesEndings:
-            os.unlink('{}{}'.format(driver,ending))
+
+print('Erstelle PDF fuer Fahrer:')
+#Erstelle die Ausgabedateien (pdf)
+#Oeffne eine Logdatei fuer die Ausgabe der Latexbefehle
+with open(os.path.join( os.getcwd(),fileNameLatexLog), 'a') as latexLogFile:
+    for driver in uniqueDrivers:
+        print('\t'+driver)
+        fileName = os.path.join(os.getcwd(), outDir ,'{}.tex'.format( driver ) )
+        with open( fileName , 'w' ,newline = '\n') as myFile:
+            myFile.write(toFileLatex.substitute(**toTemplate[driver]))
+        with cd( os.path.join(os.getcwd(), outDir) ):
+            cmd = ['pdflatex', '-interaction', 'nonstopmode', fileName]
+            proc = subprocess.Popen(cmd, stdout=latexLogFile)
+            out = proc.communicate()
+            for ending in uselessFilesEndings:
+                os.unlink('{}{}'.format(driver,ending))
 
 
 
