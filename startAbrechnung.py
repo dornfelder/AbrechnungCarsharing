@@ -64,8 +64,7 @@ def calculateCost( distance , duration):
     if(distance <= distanceForRate1):
         tmp = distance * rate_1
     else:
-        #tmp = distanceForRate1 * rate_1 + (distance - distanceForRate1) * rate_2
-        tmp = distance * rate_2
+        tmp = distanceForRate1 * rate_1 + (distance - distanceForRate1) * rate_2
     if(highDuration <= duration):
         tmp = max( [tmp , highDurationDistance * rate_1] )
     return tmp
