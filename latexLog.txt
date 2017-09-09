@@ -115,7 +115,36 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 <../../templates/signature.png, id=1, 642.4pt x 401.5pt>
 <use ../../templates/signature.png> <use ../../templates/signature.png>
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../templates/signatur
-e.png (PNG copy)>] [2] (./Alex.aux)
+e.png (PNG copy)>]
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 112.
+
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 112.
+
+[2] (./Alex.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -124,7 +153,7 @@ n/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk></usr/share/texlive/tex
 mf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on Alex.pdf (2 pages, 187262 bytes).
+Output written on Alex.pdf (2 pages, 188959 bytes).
 Transcript written on Alex.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -243,7 +272,36 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 <../../templates/signature.png, id=1, 642.4pt x 401.5pt>
 <use ../../templates/signature.png> <use ../../templates/signature.png>
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../templates/signatur
-e.png (PNG copy)>] [2] (./Julian.aux)
+e.png (PNG copy)>]
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 127.
+
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 127.
+
+[2] (./Julian.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -252,5 +310,5 @@ n/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk></usr/share/texlive/tex
 mf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on Julian.pdf (2 pages, 188222 bytes).
+Output written on Julian.pdf (2 pages, 189770 bytes).
 Transcript written on Julian.log.

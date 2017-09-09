@@ -26,7 +26,7 @@ month = 6
 automatischesDatum = True #True oder False
 
 #Gebe das Erstelldatum der Abrechnung manuell ein. (Diese Eingabe wird nur genutzt, falls automatischesDatum = False)
-settlementDate = '18 August 2017'
+settlementDate = '18. August 2017'
 
 #Ende Nutzereingabe
 ############################
@@ -52,10 +52,10 @@ fileNameLatexTemplate = './templates/template4Python.tex'
 if automatischesDatum:
     if os.name == 'posix':#We ware on Linux
         locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8') # use German locale;
-        settlementDate = datetime.now().strftime("%-d %B %Y")   # %-d >> 9 instead of %d >> 09
+        settlementDate = datetime.now().strftime("%-d. %B %Y")   # %-d >> 9 instead of %d >> 09
     elif os.name ==  'nt':#We are on Windows
         locale.setlocale(locale.LC_ALL, 'deu_deu')
-        settlementDate = datetime.now().strftime("%#d %B %Y")
+        settlementDate = datetime.now().strftime("%#d. %B %Y")
     else:
         print("#########\n\nDas Betriebssystem ist weder Windows noch Linux\nDas Format des Erstelldatums kann nicht zuverlaessig automatish bestimmt werden.\n Bitte kontrolliere das Erstelldatum und mache eine manuelle EIngabe im Skript.")
         sys(exit)
@@ -73,7 +73,7 @@ def calculateCost( distance , duration):
     #von distanceForRate1, danach gilt rate_2
     rate_1 = 0.5   #[Euro / km]
     rate_2 = 0.25  #[Euro / km]
-    distanceForRate1 = 150  #[km]
+    distanceForRate1 = 139  #[km]
     #Ab einer Zeitdauer von highDuration gibt es einen Mindestpreis, 
     #der sich aus einer Mindeststrecke highDurationDistance berechnet.
     highDuration = 24 #[h]
@@ -204,7 +204,7 @@ for data in inputData:
     duration =  ((end-begin).total_seconds()) / (60*60) #Dauer in Stunden
     distance = int(data[ 'distance' ])
     cost = calculateCost( distance , duration )
-    
+    ###Ausgabe
     calcData.append({'driverName' :name, 'date':begin, 'carName':carName, 'duration':duration, 'distance':distance, 'cost':cost})
 #Ordne die einzelnen Fahrteintraege den Fahrern zu
 
@@ -213,7 +213,7 @@ calcData.sort(key = lambda x: (x['driverName'] , x['date'] ) )
 
 #Ersetze den Eintrag begin (datetime object) mit einem String
 for data in calcData:
-    data['date'] = data['date'].strftime('%d %m %Y')
+    data['date'] = data['date'].strftime('%d.%m.%Y')
 
 #Erstelle eine Liste der im betrachteten Monat aktiven Fahrer ausgehend von den Fahrdaten
 uniqueDrivers = list(set( map(lambda x:x['driverName'], calcData) ))
@@ -243,7 +243,7 @@ for driver in uniqueDrivers:
     tmp['settlementDate'] = settlementDate
     tmp['month']    =   (gerMonthNames(month))
     tmp['year']     =   str(year)
-    tmp['sum']      =   str(toTemplateSums[driver])
+    tmp['sum']      =   '{:.2f}'.format(toTemplateSums[driver])
     tmp['firstName']=   driverData[driver]['firstName']
     tmp['lastName'] =   driverData[driver]['lastName']
     tmp['street'] =   driverData[driver]['street']
