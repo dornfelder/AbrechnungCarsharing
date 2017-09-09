@@ -13,9 +13,11 @@ import locale
 #2. In diesem Unterverzeichnis erstelle fuer jedes Fahrzeug eine Datei im Format "aurCs108.txt"
 #   mit Dateiendung ".txt" und einem Namen, der in der Abrechnugnsauflistugn als Fahrzeugkuerzel
 #   verwendet werden kann.
+#   Tage des Monats vor dem Abrechnungsmonat können mit fuehrendem Zeichen 'v' eingegeben werden. Bspl.: 'v31'
+#   Tage des Monats nach dem Abrechnungsmonat können mit fuehrendem Zeichen 'n' eingegeben werden. Bspl.: 'n01' oder 'n1'
 #3. Aktualisiere gegebenfalls das Fahrerverzeichnis "fahrerverzeichnis.txt"
 #4. Gib im nachfolgenden Bereich der Nutzereingabe das Jahr und den Monat der zu bearbeitenden Daten ein.
-#5- Gib im nachfolgenden Bereich der Nutzereingabe das Erstelldatum der Abrechnung ein.
+#5- Gib im nachfolgenden Bereich der Nutzereingabe bei Bedarf das Erstelldatum der Abrechnung ein.
 #6  Fuehre dieses Skript aus.
 
 #Gebe das Jahr des zu bearbeitenden Monats ein
@@ -47,6 +49,8 @@ fileNameLatexLog = 'latexLog.txt'
 fileNameDriverDirectory = 'fahrerverzeichnis.txt'
 #Gebe den Namen der Latexvorlage ein
 fileNameLatexTemplate = './templates/template4Python.tex'
+#Gebe den Namen der Latexvorlage fuer die Gesamtauflistung ein
+fileNameLatexTemplateGesamtauflistung = './templates/template4PythonGesamtauflistung.tex'
 
 #Erstelle das Erstelldatum der Abrechnung automatisch
 if automatischesDatum:
@@ -59,7 +63,6 @@ if automatischesDatum:
     else:
         print("#########\n\nDas Betriebssystem ist weder Windows noch Linux\nDas Format des Erstelldatums kann nicht zuverlaessig automatish bestimmt werden.\n Bitte kontrolliere das Erstelldatum und mache eine manuelle EIngabe im Skript.")
         sys(exit)
-
 
 #Ende Eingaben eines sonderbaren Nutzers
 ############################
@@ -86,8 +89,17 @@ def calculateCost( distance , duration):
         tmp = max( [tmp , highDurationDistance * rate_1] )
     return tmp
 
-
 def calculateDate( year, month, dateStrZfilled2Numbers, timeStr4Numbers ):
+    if dateStrZfilled2Numbers[0] == 'v':
+        print (str(month) + dateStrZfilled2Numbers)
+        month = month - 1
+        dateStrZfilled2Numbers = dateStrZfilled2Numbers[1:].zfill(2)
+        print (str(month) + dateStrZfilled2Numbers)
+    elif dateStrZfilled2Numbers[0] == 'n':
+        print (str(month) + dateStrZfilled2Numbers)
+        month = month + 1
+        dateStrZfilled2Numbers = dateStrZfilled2Numbers[1:].zfill(2)
+        print (str(month) + dateStrZfilled2Numbers)
     #Gueltge Uhrzeiten sind im Bereich 0000 bis 2359
     #Falls die Uhrzeit 2400 betraegt, ist der passende Tag zu inkrementieren und die Uhrzeit ist auf 2359 zu setzen
     if timeStr4Numbers == '2400':
@@ -106,6 +118,32 @@ def gerMonthNames(integerMonth):
         sys.exit('Der Parameter zu gerMonthNames ist kein Integer im Bereich 1 bis 12')
     return tmp
 
+def formatGesamtauflistung(outData, toTemplateSums, uniqueDrivers):
+    delimiterLatexTable = '&'
+    endLineLatexTable1 = r'\\\cline{2-9}'
+    endLineLatexTable2 = r'\\\hline'
+    tmpStr = ''
+    for driver in uniqueDrivers:
+        lenData = len(outData[driver])
+        for index,entry in enumerate( outData[driver] ):
+            if index == 0:
+                tmpStr = tmpStr \
+                    + '\\multirow{' + str(lenData) + '}{*}{'+driver + '}'
+            tmpStr = tmpStr + delimiterLatexTable \
+                + entry['carName'].upper() + delimiterLatexTable \
+                + entry['begin'].strftime('%d.%m.%Y') + delimiterLatexTable \
+                + entry['end'].strftime('%d.%m.%Y') + delimiterLatexTable \
+                + entry['begin'].strftime('%H:%M') + delimiterLatexTable \
+                + entry['end'].strftime('%H:%M') + delimiterLatexTable \
+                + '{:.2f}'.format( entry['duration'] )+ delimiterLatexTable \
+                + '{:.2f}'.format( entry['distance'] )+ delimiterLatexTable \
+                + '{:.2f}'.format( entry['cost'] )+ delimiterLatexTable
+            if index != lenData-1 :
+                    tmpStr = tmpStr + endLineLatexTable1 + '\n'
+            else:
+                    tmpStr = tmpStr + '{:.2f}'.format( toTemplateSums[driver] ) + endLineLatexTable2 + '\n'
+    return tmpStr
+
 def formatOutData(tripList):
     delimiterLatexTable = '&'
     endLineLatexTable = r'\\\hline'
@@ -113,7 +151,7 @@ def formatOutData(tripList):
     lastIndex = len(tripList)-1
     for index,entry in enumerate(tripList):
         tmpStr = tmpStr \
-            + entry['date'] + delimiterLatexTable \
+            + entry['begin'].strftime('%d.%m.%Y') + delimiterLatexTable \
             + entry['carName'].upper() + delimiterLatexTable \
             + '{:.2f}'.format( entry['duration'] )+ delimiterLatexTable \
             + '{:.2f}'.format( entry['distance'] )+ delimiterLatexTable \
@@ -134,8 +172,6 @@ class cd:
 
 #Ende Definition Funktionen
 ############################
-
-
 ############################
 #Beginn Einlesen der Rohdaten
 
@@ -149,8 +185,6 @@ for file in os.listdir(os.path.join(os.getcwd(), inputDirectory)):
         #print(os.path.join(os.path.join(os.getcwd(), inputDirectory), file))
         fileNames.append(file)
         carNames.append(file.replace(fileEnding,''))
-
-
 
 #Definiere Keys fuer verschiedene Datenbestandteile in den Eingabedateien
 keysInputData = ['driverName','dateBegin','timeBegin','distance','dateEnd','timeEnd']
@@ -186,10 +220,8 @@ with open(fileNameDriverDirectory,'r',newline = '') as myFile:
         if data:    #only append data to driverData if data is not empty list
             driverData[data['driverName']] = { key : value.strip() for key,value in data.items()}
 
-
 #Ende Einlesen der Rohdaten
 ############################
-
 ############################
 #Beginn Bearbeitung der Daten
 
@@ -205,15 +237,11 @@ for data in inputData:
     distance = int(data[ 'distance' ])
     cost = calculateCost( distance , duration )
     ###Ausgabe
-    calcData.append({'driverName' :name, 'date':begin, 'carName':carName, 'duration':duration, 'distance':distance, 'cost':cost})
+    calcData.append({'driverName' :name, 'begin':begin, 'end':end, 'carName':carName, 'duration':duration, 'distance':distance, 'cost':cost})
 #Ordne die einzelnen Fahrteintraege den Fahrern zu
 
 #Sortiere calcData nach Fahrer und dann nach Startzeitpunkten
-calcData.sort(key = lambda x: (x['driverName'] , x['date'] ) )
-
-#Ersetze den Eintrag begin (datetime object) mit einem String
-for data in calcData:
-    data['date'] = data['date'].strftime('%d.%m.%Y')
+calcData.sort(key = lambda x: (x['driverName'] , x['begin'] ) )
 
 #Erstelle eine Liste der im betrachteten Monat aktiven Fahrer ausgehend von den Fahrdaten
 uniqueDrivers = list(set( map(lambda x:x['driverName'], calcData) ))
@@ -222,7 +250,7 @@ print('Folgende Fahrer sind im betrachteten Zeitraum aktiv:')
 for driver in uniqueDrivers:
     print('\t'+driver)
 
-#Erstelle eine Ausgabeliste, die fuer jeden Fahrer eine Liste der Eintraege enthaelt. 
+#Erstelle eine Ausgabeliste, die fuer jeden Fahrer eine Liste der Eintraege enthaelt.
 #Diese Liste der Eintraege ist schon geordnet
 outData = {}
 for driver in uniqueDrivers:
@@ -236,6 +264,48 @@ for driver in uniqueDrivers:
         tmp = tmp + data['cost']
     toTemplateSums[driver] = tmp
 
+######################################
+#Bereite Latex vor
+
+#Erstelle das Ausgabeverzeichnis
+outDir = os.path.join( os.getcwd(), outputDirectory )
+if not os.path.exists(outDir):
+    os.makedirs(outDir)
+
+#Erstelle eine Liste von endungen unnoetiger Dateien
+uselessFilesEndings = ['.tex','.aux','.log']
+
+######################################
+#Erstelle eine Auflistung aller Fahrten
+#Erstelle ein Dictinonary von Dictionaries um Platzhalter in der Vorlage zu ersetzen
+toTemplate = {'table': formatGesamtauflistung(outData, toTemplateSums, uniqueDrivers)}
+
+#Lese die Vorlage in eine Variable
+with open(fileNameLatexTemplateGesamtauflistung,'r', newline='') as myFile:
+    templateStr = myFile.read()
+
+#Erstelle ein Python String Template Objekt mit gewuenschtem Trennzeichen
+class latexTemplate(string.Template):
+    delimiter = "##"
+toFileLatex = latexTemplate(templateStr)
+
+print('Erstelle PDF Gesamtauflistung')
+#Erstelle die Ausgabedateien (pdf)
+dateiName = 'Gesamtauflistung'
+#Oeffne eine Logdatei fuer die Ausgabe der Latexbefehle
+with open(os.path.join( os.getcwd(),fileNameLatexLog), 'w') as latexLogFile:
+    fileName = os.path.join(os.getcwd(), outDir ,dateiName+'.tex' )
+    with open( fileName , 'w' ,newline = '\n') as myFile:
+        myFile.write(toFileLatex.substitute(**toTemplate))
+    with cd( os.path.join(os.getcwd(), outDir) ):
+        cmd = ['pdflatex', '-interaction', 'nonstopmode', fileName]
+        proc = subprocess.Popen(cmd, stdout=latexLogFile)
+        out = proc.communicate()
+        for ending in uselessFilesEndings:
+            os.unlink('{}{}'.format(dateiName,ending))
+
+######################################
+#Erstelle die Abrechnungen der einzelnen Fahrer
 #Erstelle ein Dictinonary von Dictionaries um Platzhalter in der Vorlage zu ersetzen
 toTemplate = {}
 for driver in uniqueDrivers:
@@ -263,18 +333,10 @@ class latexTemplate(string.Template):
     delimiter = "##"
 toFileLatex = latexTemplate(templateStr)
 
-#Erstelle das Ausgabeverzeichnis
-outDir = os.path.join( os.getcwd(), outputDirectory )
-if not os.path.exists(outDir):
-    os.makedirs(outDir)
-
-#Erstelle eine Liste von endungen unnoetiger Dateien
-uselessFilesEndings = ['.tex','.aux','.log']
-
 print('Erstelle PDF fuer Fahrer:')
 #Erstelle die Ausgabedateien (pdf)
 #Oeffne eine Logdatei fuer die Ausgabe der Latexbefehle
-with open(os.path.join( os.getcwd(),fileNameLatexLog), 'w') as latexLogFile:
+with open(os.path.join( os.getcwd(),fileNameLatexLog), 'a') as latexLogFile:
     for driver in uniqueDrivers:
         print('\t'+driver)
         fileName = os.path.join(os.getcwd(), outDir ,'{}.tex'.format( driver ) )
@@ -287,6 +349,6 @@ with open(os.path.join( os.getcwd(),fileNameLatexLog), 'w') as latexLogFile:
             for ending in uselessFilesEndings:
                 os.unlink('{}{}'.format(driver,ending))
 
-
-
+#Warte auf Nutzereingabe um Kommandofenster zu schliessen
+input("\nDruecke ENTER um dieses Fenster zu schliessen.")
 

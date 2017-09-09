@@ -1,6 +1,79 @@
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
+
+(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2017_06/Gesamtauflistung.
+tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def))))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty))
+No file Gesamtauflistung.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd) [1{/var/lib/texmf/f
+onts/map/pdftex/updmap/pdftex.map}] (./Gesamtauflistung.aux) ){/usr/share/texli
+ve/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}</usr/share/texlive/texmf-dist/f
+onts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/eurosym/feymr10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/stix/stix-mathex.pfb>
+Output written on Gesamtauflistung.pdf (1 page, 59369 bytes).
+Transcript written on Gesamtauflistung.log.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
 (/home/julian/Dropbox/git/AbrechnungCarsharing/output/2017_06/Alex.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
@@ -128,7 +201,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 112.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 113.
 
 
 Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
@@ -142,7 +215,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 112.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 113.
 
 [2] (./Alex.aux)
 
@@ -153,7 +226,7 @@ n/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk></usr/share/texlive/tex
 mf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on Alex.pdf (2 pages, 188959 bytes).
+Output written on Alex.pdf (2 pages, 188728 bytes).
 Transcript written on Alex.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -310,5 +383,5 @@ n/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk></usr/share/texlive/tex
 mf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on Julian.pdf (2 pages, 189770 bytes).
+Output written on Julian.pdf (2 pages, 189568 bytes).
 Transcript written on Julian.log.
