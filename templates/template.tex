@@ -35,6 +35,7 @@
 \usepackage{fancyhdr}
 \usepackage[official]{eurosym}
 \usepackage{hhline}
+\usepackage{graphicx}
 
 
 \renewcommand*{\raggedsignature}{\raggedright} % Stop the signature from indenting
@@ -65,7 +66,7 @@
 
 \setkomavar{fromaddress}{Lehmweg 4, 26603 Aurich} % Your address
 
-\setkomavar{signature}{Alexandra Seregely} % Your name used in the signature
+\setkomavar{signature}{\includegraphics[height=2cm]{signature}\\Alexandra Seregely} % Your name used in the signature
 
 \setkomavar{frombank}{Car Sharing Aurich e.V.; Amtsgericht Aurich Registerblatt VR 681\\
 Bankverbindung: Raiffeisen Volksbank eG; BLZ: 285 622 97; Konto: 444 101 000}
@@ -91,7 +92,7 @@ Bankverbindung: Raiffeisen Volksbank eG; BLZ: 285 622 97; Konto: 444 101 000}
 
 im oben genannten Zeitraum haben Sie im Car Sharing Aurich e.V. als Mitglied die folgende(n) Fahrt(en) zurückgelegt.
 
-Dabei ist der nachfolgend in Tabelle \ref{table:fahrten} aufgeführte Aufwand entstanden, welcher von Ihrem Konto eingezogen wird.
+Dabei ist der nachfolgend in Tabelle aufgeführte Aufwand entstanden, welcher von Ihrem Konto eingezogen wird.
 
 \closing{Mit freundlichen Grüßen}
 
@@ -103,7 +104,7 @@ Dabei ist der nachfolgend in Tabelle \ref{table:fahrten} aufgeführte Aufwand en
 
 \end{letter}
 
-
+\newpage
 \begin{tabular}{ | c | c | c | c | c | c | c | c | c | }
 \hline
 Datum & Fahrzeug & Dauer [h] & Berechnete Kilometer [km]& Kosten [\euro{}]\\ \hline

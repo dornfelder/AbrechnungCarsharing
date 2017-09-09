@@ -4,6 +4,7 @@ import sys
 import os
 import subprocess
 import string
+import locale
 ############################
 #Beginn Nutzereingabe
 
@@ -21,7 +22,10 @@ import string
 year = 2017
 #Gebe den zu bearbeitenden Monat ein
 month = 6
-#Gebe das Erstelldatum der Abrechnung ein
+#Soll das Erstelldatum der Abrechnung automatisch erstellt werden?
+automatischesDatum = True #True oder False
+
+#Gebe das Erstelldatum der Abrechnung manuell ein. (Diese Eingabe wird nur genutzt, falls automatischesDatum = False)
 settlementDate = '18 August 2017'
 
 #Ende Nutzereingabe
@@ -43,6 +47,19 @@ fileNameLatexLog = 'latexLog.txt'
 fileNameDriverDirectory = 'fahrerverzeichnis.txt'
 #Gebe den Namen der Latexvorlage ein
 fileNameLatexTemplate = './templates/template4Python.tex'
+
+#Erstelle das Erstelldatum der Abrechnung automatisch
+if automatischesDatum:
+    if os.name == 'posix':#We ware on Linux
+        locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8') # use German locale;
+        settlementDate = datetime.now().strftime("%-d %B %Y")   # %-d >> 9 instead of %d >> 09
+    elif os.name ==  'nt':#We are on Windows
+        locale.setlocale(locale.LC_ALL, 'deu_deu')
+        settlementDate = datetime.now().strftime("%#d %B %Y")
+    else:
+        print("#########\n\nDas Betriebssystem ist weder Windows noch Linux\nDas Format des Erstelldatums kann nicht zuverlaessig automatish bestimmt werden.\n Bitte kontrolliere das Erstelldatum und mache eine manuelle EIngabe im Skript.")
+        sys(exit)
+
 
 #Ende Eingaben eines sonderbaren Nutzers
 ############################
@@ -257,7 +274,7 @@ uselessFilesEndings = ['.tex','.aux','.log']
 print('Erstelle PDF fuer Fahrer:')
 #Erstelle die Ausgabedateien (pdf)
 #Oeffne eine Logdatei fuer die Ausgabe der Latexbefehle
-with open(os.path.join( os.getcwd(),fileNameLatexLog), 'a') as latexLogFile:
+with open(os.path.join( os.getcwd(),fileNameLatexLog), 'w') as latexLogFile:
     for driver in uniqueDrivers:
         print('\t'+driver)
         fileName = os.path.join(os.getcwd(), outDir ,'{}.tex'.format( driver ) )
