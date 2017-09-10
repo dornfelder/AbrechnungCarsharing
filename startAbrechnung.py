@@ -246,6 +246,22 @@ print('Folgende Fahrer sind im betrachteten Zeitraum aktiv:')
 for driver in uniqueDrivers:
     print('\t'+driver)
 
+#Ueberpruefe fuer jeden aktiven Fahrer, ob es einen passenden Eintrag im Fahrerverzeichnis gibt.
+allDriverInDriverData = True
+driverNotInDriverData = []
+for driver in uniqueDrivers:
+    if not driver in driverData:
+        allDriverInDriverData = False
+        driverNotInDriverData.append(driver)
+if allDriverInDriverData:
+    print('Alle aktiven Fahrer werden im Fahrerverzeichnis gefunden.')
+else:
+    print('xxxxxxxxxxxxxxx\nFolgende Fahrer koennen nicht im Fahrerverzeichnis gefunden werden:')
+    for driver in driverNotInDriverData:
+        print('\t{}'.format(driver))
+    print('\n\n\nDas Programm wird abgebrochen.\n\n\n')
+    sys.exit()
+
 #Erstelle eine Ausgabeliste, die fuer jeden Fahrer eine Liste der Eintraege enthaelt.
 #Diese Liste der Eintraege ist schon geordnet
 outData = {}
