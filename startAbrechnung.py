@@ -91,15 +91,11 @@ def calculateCost( distance , duration):
 
 def calculateDate( year, month, dateStrZfilled2Numbers, timeStr4Numbers ):
     if dateStrZfilled2Numbers[0] == 'v':
-        print (str(month) + dateStrZfilled2Numbers)
         month = month - 1
         dateStrZfilled2Numbers = dateStrZfilled2Numbers[1:].zfill(2)
-        print (str(month) + dateStrZfilled2Numbers)
     elif dateStrZfilled2Numbers[0] == 'n':
-        print (str(month) + dateStrZfilled2Numbers)
         month = month + 1
         dateStrZfilled2Numbers = dateStrZfilled2Numbers[1:].zfill(2)
-        print (str(month) + dateStrZfilled2Numbers)
     #Gueltge Uhrzeiten sind im Bereich 0000 bis 2359
     #Falls die Uhrzeit 2400 betraegt, ist der passende Tag zu inkrementieren und die Uhrzeit ist auf 2359 zu setzen
     if timeStr4Numbers == '2400':
