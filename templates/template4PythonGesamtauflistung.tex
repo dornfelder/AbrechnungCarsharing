@@ -30,6 +30,8 @@
 \usepackage{multirow}
 \usepackage{graphicx}
 \usepackage[a4paper,margin=1in,landscape]{geometry}
+\usepackage{hhline}
+\usepackage{lastpage}
 
 \setlength\parindent{0pt}
 
@@ -41,7 +43,7 @@
 %
     }
 \fancyfoot[R]{%
-    Seite \thepage%
+    Seite \thepage{} von \pageref{LastPage}%
     }
 }
 \pagestyle{plain}
@@ -53,13 +55,11 @@
 
 
 \begin{document}
-\begin{table}
-\centering
-
-\begin{tabular}{ | c | r | r | r | r | c | r | r | r | r |}
-\hline
-Fahrer & Fahrzeug & Datum Beginn & Datum Ende & Beginn & Ende  & Dauer [h]& Distanz [km]& Kosten [\euro{}]& $\sum$ Kosten [\euro{}]\\ \hline
+%\begin{table}
+%\centering
+%\begin{tabular}{ | c | r | r | r | r | c | r | r | r |}\hline
+%Fahrer & Fahrzeug & Datum Beginn & Datum Ende & Beginn & Ende  & Dauer [h]& Distanz [km]& Kosten [\euro{}]\\ \hline
 ##table
-\end{tabular}
-\end{table}
+%\end{tabular}
+%\end{table}
 \end{document}

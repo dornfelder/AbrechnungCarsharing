@@ -115,16 +115,39 @@ def gerMonthNames(integerMonth):
     return tmp
 
 def formatGesamtauflistung(outData, toTemplateSums, uniqueDrivers):
+    #Maximale Anzahl Zeilen pro Seite der Gesamtauflistung
+    maxRow = 31
+    #Zaehler der Anzahl der Zeilen der aktuellen Seite
+    rowCount = 0
+    #Trennzeichen zwischen zwei Spalten der Latextabelle
     delimiterLatexTable = '&'
+    #Trennzeichen zwischen zwei Zeilen innerhalb des Tabellenbereiches eines Fahrers
     endLineLatexTable1 = r'\\\cline{2-9}'
-    endLineLatexTable2 = r'\\\hline'
-    tmpStr = ''
+    #Trennzeichen zwischen zwei Zeilen vor der Summenangabe eines Fahrers
+    endLineLatexTable2 = r'\\\hhline{|-|-|-|-|-|=|=|=|=|}'
+    #Trennzeichen am Ende einer Latextabelle
+    endLineLatexTable3 = r'\\\hline'
+    #Beginn einer Tabelle in Latex
+    tableBegin = r'\begin{table}'+'\n'+ r'\centering'+'\n'+ r'\begin{tabular}{ | c | r | r | r | r | c | r | r | r |}\hline'+'\n'+r'Fahrer & Fahrzeug & Datum Beginn & Datum Ende & Beginn & Ende  & Dauer [h]& Distanz [km]& Kosten [\euro{}]\\ \hline'+'\n'
+    #Ende eienr Tabelle in Latex
+    tableEnd = r'\end{tabular}'+'\n'+ r'\end{table} '+'\n'
+    #Latexbefehl um eine neue Zeile anzufangen
+    newPage = r'\newpage'+'\n'
+    ############ Starte
+    tmpStr = tableBegin
     for driver in uniqueDrivers:
         lenData = len(outData[driver])
+        durationSum = 0
+        distanceSum = 0
         for index,entry in enumerate( outData[driver] ):
+            tableEndedRightNow = False  #Wenn dieser Programmteil ausgefuehrt wird, war die letzte Zeile nicht die allerletzte Zeile
+            durationSum = durationSum + entry['duration']
+            distanceSum = distanceSum + entry['distance']
+            #Schreibe den Namen des Fahrers, dessen Eintraege jetzt aufgezaehlt werden
             if index == 0:
                 tmpStr = tmpStr \
-                    + '\\multirow{' + str(lenData) + '}{*}{'+driver + '}'
+                    + driver
+            #Schreibe eine Zeile
             tmpStr = tmpStr + delimiterLatexTable \
                 + entry['carName'].upper() + delimiterLatexTable \
                 + entry['begin'].strftime('%d.%m.%Y') + delimiterLatexTable \
@@ -133,11 +156,27 @@ def formatGesamtauflistung(outData, toTemplateSums, uniqueDrivers):
                 + entry['end'].strftime('%H:%M') + delimiterLatexTable \
                 + '{:.2f}'.format( entry['duration'] )+ delimiterLatexTable \
                 + '{:.2f}'.format( entry['distance'] )+ delimiterLatexTable \
-                + '{:.2f}'.format( entry['cost'] )+ delimiterLatexTable
+                + '{:.2f}'.format( entry['cost'] )
+            #Beende die aktuelle Zeile als mittige Zeile
             if index != lenData-1 :
                     tmpStr = tmpStr + endLineLatexTable1 + '\n'
+                    rowCount = rowCount + 1
+            #Beende die aktuelle Zeile als letzte Zeile eines Fahreres und gebe Summen an
             else:
-                    tmpStr = tmpStr + '{:.2f}'.format( toTemplateSums[driver] ) + endLineLatexTable2 + '\n'
+                    tmpStr = tmpStr + endLineLatexTable2 + '\n' \
+                        + '\\multicolumn{5}{|c|}{}' + delimiterLatexTable \
+                        + 'Summen:' + delimiterLatexTable \
+                        + '{:.2f}'.format( durationSum ) + delimiterLatexTable \
+                        + '{:.2f}'.format( distanceSum ) + delimiterLatexTable \
+                        + '{:.2f}'.format( toTemplateSums[driver] ) + endLineLatexTable3 + '\n'
+                    rowCount = rowCount + 2
+            #Falls die aktuelle Tabelle laenger ist als die zulaessige Zeilenanzahl, beende die aktuelle Tabelle, beginne eine neue Seite und beginne eine neue Tabelle
+            if maxRow <= rowCount:
+                tmpStr = tmpStr + tableEnd + newPage + tableBegin
+                rowCount = 0
+                tableEndedRightNow = True
+    if not tableEndedRightNow:
+        tmpStr = tmpStr + tableEnd
     return tmpStr
 
 def formatOutData(tripList):
@@ -311,8 +350,9 @@ with open(os.path.join( os.getcwd(),fileNameLatexLog), 'w') as latexLogFile:
         myFile.write(toFileLatex.substitute(**toTemplate))
     with cd( os.path.join(os.getcwd(), outDir) ):
         cmd = ['pdflatex', '-interaction', 'nonstopmode', fileName]
-        proc = subprocess.Popen(cmd, stdout=latexLogFile)
-        out = proc.communicate()
+        for i in range(2):  #Um die Gesamtanzahl der Seiten in Latex fuer den Befehl \pageref{LastPage} verfuegbar zu machen, muss Latex zweimal aufgerufen werden.
+            proc = subprocess.Popen(cmd, stdout=latexLogFile)
+            out = proc.communicate()
         for ending in uselessFilesEndings:
             os.unlink('{}{}'.format(dateiName,ending))
 
