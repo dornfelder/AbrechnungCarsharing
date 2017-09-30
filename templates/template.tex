@@ -36,6 +36,7 @@
 \usepackage[official]{eurosym}
 \usepackage{hhline}
 \usepackage{graphicx}
+\usepackage{lastpage}
 
 
 \renewcommand*{\raggedsignature}{\raggedright} % Stop the signature from indenting
@@ -47,7 +48,7 @@
     \usekomavar{frombank}%
     }
 \fancyfoot[R]{%
-    Seite \thepage%
+    Seite \thepage{} von \pageref{LastPage}%
     }
 }
 \pagestyle{plain}
@@ -107,7 +108,7 @@ Dabei ist der, auf der/den nächsten Seite/n aufgeführte, Aufwand entstanden, w
 \newpage
 \begin{tabular}{ | c | c | c | c | c | c | c | c | c | }
 \hline
-Datum & Fahrzeug & Dauer [h] & Berechnete Kilometer [km]& Kosten [\euro{}]\\ \hline
+Datum & Fahrzeug & Dauer [h] & Distanz [km]& Kosten [\euro{}]\\ \hline
 16.04.2017 & CS 109 & 12.75 & 11 & 25 \\ 
 16.04.2017 & CS 109 & 12.75 & 11 & 25 \\ 
 16.04.2017 & CS 109 & 12.75 & 11 & 25 \\ 

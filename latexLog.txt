@@ -71,3 +71,659 @@ onts/type1/public/eurosym/feymr10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/stix/stix-mathex.pfb>
 Output written on Gesamtauflistung.pdf (1 page, 59369 bytes).
 Transcript written on Gesamtauflistung.log.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2017_06/Alex.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlttr2.cls
+Document Class: scrlttr2 2015/10/03 v3.19a KOMA-Script document class (letter)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/DIN.lco)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def))))
+
+Class scrlttr2 Warning: Usage of package `fancyhdr' together
+(scrlttr2)              with a KOMA-Script class is not recommended.
+(scrlttr2)              I'd suggest to use 
+(scrlttr2)              package `scrlayer-scrpage'.
+(scrlttr2)              Nevertheless, using requested
+(scrlttr2)              package `fancyhdr' on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty)
+
+Class scrlttr2 Warning: \date changes the internal \LaTeX date only.
+(scrlttr2)              You should note that this changes the default
+(scrlttr2)              value of variable `date' only as long as someone
+(scrlttr2)              uses `\setkomavar` to change the content of
+(scrlttr2)              variable `date'.
+(scrlttr2)              Therefore, usage of `\setkomavar' is recommended
+(scrlttr2)              to change the letter's date on input line 75.
+
+
+LaTeX Warning: Unused global option(s):
+    [addrfield=truefirstfoot=on].
+
+No file Alex.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+Foldmarks: yes
+Head of first page
+Foot of first page
+Address (backaddress, addressee)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
+Location field: empty
+Title: no
+Subject: before opening
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 92.
+
+<../../templates/signature.png, id=1, 642.4pt x 401.5pt>
+<use ../../templates/signature.png> <use ../../templates/signature.png>
+
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 106.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../templates/signatur
+e.png (PNG copy)>]
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 114.
+
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 114.
+
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 117.
+
+[2]
+
+Package lastpage Warning: Rerun to get the references right on input line 119.
+
+
+AED: lastpage setting LastPage
+(./Alex.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ){/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc} </home/julia
+n/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk></usr/share/texlive/tex
+mf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on Alex.pdf (2 pages, 188930 bytes).
+Transcript written on Alex.log.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2017_06/Alex.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlttr2.cls
+Document Class: scrlttr2 2015/10/03 v3.19a KOMA-Script document class (letter)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/DIN.lco)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def))))
+
+Class scrlttr2 Warning: Usage of package `fancyhdr' together
+(scrlttr2)              with a KOMA-Script class is not recommended.
+(scrlttr2)              I'd suggest to use 
+(scrlttr2)              package `scrlayer-scrpage'.
+(scrlttr2)              Nevertheless, using requested
+(scrlttr2)              package `fancyhdr' on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty)
+
+Class scrlttr2 Warning: \date changes the internal \LaTeX date only.
+(scrlttr2)              You should note that this changes the default
+(scrlttr2)              value of variable `date' only as long as someone
+(scrlttr2)              uses `\setkomavar` to change the content of
+(scrlttr2)              variable `date'.
+(scrlttr2)              Therefore, usage of `\setkomavar' is recommended
+(scrlttr2)              to change the letter's date on input line 75.
+
+
+LaTeX Warning: Unused global option(s):
+    [addrfield=truefirstfoot=on].
+
+(./Alex.aux) (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+Foldmarks: yes
+Head of first page
+Foot of first page
+Address (backaddress, addressee)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
+Location field: empty
+Title: no
+Subject: before opening
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 92.
+
+<../../templates/signature.png, id=1, 642.4pt x 401.5pt>
+<use ../../templates/signature.png> <use ../../templates/signature.png>
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../templates/signatur
+e.png (PNG copy)>]
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 114.
+
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 114.
+
+[2] 
+AED: lastpage setting LastPage
+(./Alex.aux) ){/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc} 
+</home/julian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk></usr/share
+/texlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on Alex.pdf (2 pages, 188730 bytes).
+Transcript written on Alex.log.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2017_06/Julian.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlttr2.cls
+Document Class: scrlttr2 2015/10/03 v3.19a KOMA-Script document class (letter)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/DIN.lco)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def))))
+
+Class scrlttr2 Warning: Usage of package `fancyhdr' together
+(scrlttr2)              with a KOMA-Script class is not recommended.
+(scrlttr2)              I'd suggest to use 
+(scrlttr2)              package `scrlayer-scrpage'.
+(scrlttr2)              Nevertheless, using requested
+(scrlttr2)              package `fancyhdr' on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty)
+
+Class scrlttr2 Warning: \date changes the internal \LaTeX date only.
+(scrlttr2)              You should note that this changes the default
+(scrlttr2)              value of variable `date' only as long as someone
+(scrlttr2)              uses `\setkomavar` to change the content of
+(scrlttr2)              variable `date'.
+(scrlttr2)              Therefore, usage of `\setkomavar' is recommended
+(scrlttr2)              to change the letter's date on input line 75.
+
+
+LaTeX Warning: Unused global option(s):
+    [addrfield=truefirstfoot=on].
+
+No file Julian.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+Foldmarks: yes
+Head of first page
+Foot of first page
+Address (backaddress, addressee)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
+Location field: empty
+Title: no
+Subject: before opening
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 92.
+
+<../../templates/signature.png, id=1, 642.4pt x 401.5pt>
+<use ../../templates/signature.png> <use ../../templates/signature.png>
+
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 106.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../templates/signatur
+e.png (PNG copy)>]
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 128.
+
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 128.
+
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 131.
+
+[2]
+
+Package lastpage Warning: Rerun to get the references right on input line 133.
+
+
+AED: lastpage setting LastPage
+(./Julian.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ){/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc} </home/julia
+n/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk></usr/share/texlive/tex
+mf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on Julian.pdf (2 pages, 189753 bytes).
+Transcript written on Julian.log.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2017_06/Julian.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlttr2.cls
+Document Class: scrlttr2 2015/10/03 v3.19a KOMA-Script document class (letter)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/DIN.lco)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def))))
+
+Class scrlttr2 Warning: Usage of package `fancyhdr' together
+(scrlttr2)              with a KOMA-Script class is not recommended.
+(scrlttr2)              I'd suggest to use 
+(scrlttr2)              package `scrlayer-scrpage'.
+(scrlttr2)              Nevertheless, using requested
+(scrlttr2)              package `fancyhdr' on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty)
+
+Class scrlttr2 Warning: \date changes the internal \LaTeX date only.
+(scrlttr2)              You should note that this changes the default
+(scrlttr2)              value of variable `date' only as long as someone
+(scrlttr2)              uses `\setkomavar` to change the content of
+(scrlttr2)              variable `date'.
+(scrlttr2)              Therefore, usage of `\setkomavar' is recommended
+(scrlttr2)              to change the letter's date on input line 75.
+
+
+LaTeX Warning: Unused global option(s):
+    [addrfield=truefirstfoot=on].
+
+(./Julian.aux) (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+Foldmarks: yes
+Head of first page
+Foot of first page
+Address (backaddress, addressee)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
+Location field: empty
+Title: no
+Subject: before opening
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 92.
+
+<../../templates/signature.png, id=1, 642.4pt x 401.5pt>
+<use ../../templates/signature.png> <use ../../templates/signature.png>
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../templates/signatur
+e.png (PNG copy)>]
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 128.
+
+
+Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
+(scrlttr2)              You should note, that in 1994 font command `\bf' has
+(scrlttr2)              been defined for compatiblitiy to Script 2.0 only.
+(scrlttr2)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrlttr2)              shouldn't use such commands any longer and within
+(scrlttr2)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrlttr2)              See `fntguide.pdf' for more information about
+(scrlttr2)              recommended font commands.
+(scrlttr2)              Note also, that KOMA-Script will remove the definition
+(scrlttr2)              of `\bf' anytime until release of about version 3.20.
+(scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrlttr2)              by `\normalfont \bfseries ' on input line 128.
+
+[2] 
+AED: lastpage setting LastPage
+(./Julian.aux) ){/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc
+} </home/julian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on Julian.pdf (2 pages, 189572 bytes).
+Transcript written on Julian.log.

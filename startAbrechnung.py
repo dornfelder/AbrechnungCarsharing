@@ -356,8 +356,9 @@ with open(os.path.join( os.getcwd(),fileNameLatexLog), 'a') as latexLogFile:
             myFile.write(toFileLatex.substitute(**toTemplate[driver]))
         with cd( os.path.join(os.getcwd(), outDir) ):
             cmd = ['pdflatex', '-interaction', 'nonstopmode', fileName]
-            proc = subprocess.Popen(cmd, stdout=latexLogFile)
-            out = proc.communicate()
+            for i in range(2):  #Um die Gesamtanzahl der Seiten in Latex fuer den Befehl \pageref{LastPage} verfuegbar zu machen, muss Latex zweimal aufgerufen werden.
+                proc = subprocess.Popen(cmd, stdout=latexLogFile)
+                out = proc.communicate()
             for ending in uselessFilesEndings:
                 os.unlink('{}{}'.format(driver,ending))
 
