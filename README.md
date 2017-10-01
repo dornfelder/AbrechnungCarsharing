@@ -1,13 +1,13 @@
 # AbrechnungCarsharing
 How to use AbrechnungCarsharing:
 
-Linux:
-  Install Latex
-    sudo apt-get install texlive texlive-lang-german texlive-doc-de texlive-latex-extra 
-  Install Python3
-    sudo apt-get install python3 
-  Clone this directory
-  Navigate to cloned directory
+Linux:  
+  Install Latex  
+    sudo apt-get install texlive texlive-lang-german texlive-doc-de texlive-latex-extra   
+  Install Python3  
+    sudo apt-get install python3   
+  Clone this directory  
+  Navigate to cloned directory  
   Make changes using a texteditor:
     Create new input in directory "input"
       For each car, create file with similar formatting as aurCs108.txt  
