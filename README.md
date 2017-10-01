@@ -38,5 +38,6 @@ Linux:
     Choose which month should be processed by manipulating input section of startAbrechnung.py
     Adjust the template template4Python.tex
       Name of Car Sharing Verein ...
+      
   Execute script from iPython terminal by typing
     %run startAbrechnung.py
