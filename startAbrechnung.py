@@ -186,6 +186,8 @@ def formatGesamtauflistung(outData, toTemplateSums, uniqueDrivers):
     return tmpStr
 
 def formatOutData(tripList, toTemplateSum):
+    #Schalter für eine Fallunterscheidung "der/den nächsten Seite/n"
+    multiplePagesBool = False
     #Maximale Anzahl Zeilen pro Seite der Gesamtauflistung
     maxRow = 40
     #Zaehler der Anzahl der Zeilen der aktuellen Seite
@@ -214,6 +216,7 @@ def formatOutData(tripList, toTemplateSum):
         if maxRow <= rowCount:
             tmpStr = tmpStr + tableEndMid + tableBegin
             rowCount = 0
+            multiplePagesBool = True
         #Schreibe eine Zeile
         tmpStr = tmpStr \
             + entry['begin'].strftime('%d.%m.%Y') + delimiterLatexTable \
@@ -227,7 +230,7 @@ def formatOutData(tripList, toTemplateSum):
         #Beende die aktuelle Zeile als letzte Zeile des Fahreres und gebe Summen an
         else:
             tmpStr = tmpStr + tableEndFinal
-    return tmpStr
+    return tmpStr, multiplePagesBool
 
 class cd:
     """Context manager for changing the current working directory"""
@@ -406,7 +409,12 @@ for driver in uniqueDrivers:
     tmp['streetNumber'] =   driverData[driver]['streetNumber']
     tmp['postcode'] =   driverData[driver]['postcode']
     tmp['city'] =   driverData[driver]['city']
-    tmp['table'] = formatOutData( outData[driver] , toTemplateSums[driver])
+    tmp['table'],tmp['multiplePagesBool']  = formatOutData( outData[driver] , toTemplateSums[driver])
+    #Fallunterscheidung "der/den nächsten Seite/n"
+    if tmp['multiplePagesBool'] :
+        tmp['pages'] = 'den nächsten Seiten'
+    else:
+        tmp['pages'] = 'der nächsten Seite'
     #table data has to be added.
     toTemplate[driver] = tmp
 
