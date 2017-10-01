@@ -1,117 +1,114 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Elmueller Formal Letter
-% LaTeX Template
-% Version 1.3 (20/11/16)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Micha Elmueller (http://micha.elmueller.net/) with modifications by 
-% Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
+\documentclass[%DIN,
+    %pagenumber=footmiddle,
+    parskip=half,
+    fromalign=right,  % Align sender to the right
+    fromphone=false, fromfax=false,
+    fromrule=false]{scrlttr2}
 
-\documentclass[
-	pagenumber=false, % Removes page numbers from page 2 onwards when false
-	parskip=half, % Separates paragraphs with some whitespace, use parskip=full for more space or comment out to return to default
-	fromalign=right, % Aligns the from address to the right
-	foldmarks=true, % Prints small fold marks on the left of the page
-	addrfield=true % Set to false to hide the addressee section - you will then want to adjust the height of the body of the letter on the page by adding the following in this section: \makeatletter \@setplength{refvpos}{\useplength{toaddrvpos}} \makeatletter
-	firstfoot=on % Add footer
-    ]{scrlttr2}
 
-\usepackage[utf8]{inputenc} %enable german umlaute and ß
-\usepackage[T1]{fontenc} % For extra glyphs (accents, etc)
+\usepackage[ngerman]{babel}% <- use this instead package ngerman
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{stix} % Use the Stix font by default
-\usepackage[german]{babel} % Explicitly load the babel package to stop an error occurring on some LaTeX installations
-\usepackage{fancyhdr}
-\usepackage[official]{eurosym}
+%\usepackage{textcomp}
+%\usepackage{longtable}
+\usepackage{eurosym}
 \usepackage{hhline}
 \usepackage{graphicx}
 \usepackage{lastpage}
 
+\setkomafont{pagehead}{\normalfont\normalcolor}
 
+%\LoadLetterOption{template}% <- we do not have your lco file
 \renewcommand*{\raggedsignature}{\raggedright} % Stop the signature from indenting
-
-\fancypagestyle{plain}{
-\renewcommand{\headrulewidth}{0pt} 
-\fancyhf{}
-\fancyfoot[L]{%
-    \usekomavar{frombank}%
-    }
-\fancyfoot[R]{%
-    Seite \thepage{} von \pageref{LastPage}%
-    }
-}
-\pagestyle{plain}
-
-\makeatletter
-\let\ps@empty\ps@plain
-\let\ps@firstpage\ps@plain
-\makeatother
-
 
 %----------------------------------------------------------------------------------------
 %	YOUR INFORMATION AND LETTER DATE
 %----------------------------------------------------------------------------------------
 
-\setkomavar{fromname}{CSA Aurich e. V., Torsten Hoffmann} % Your name used in the from address
-
-\setkomavar{fromaddress}{Lehmweg 4, 26603 Aurich} % Your address
-
+\setkomavar{fromname}{Car Sharing Aurich e.V.\\ Torsten Hoffmann}
+%\setkomavar{fromphone}{+49 (0) 123 / 456 78-9}
+\setkomavar{fromaddress}{Lehmweg 4\\ 26603 Aurich}
 \setkomavar{signature}{\includegraphics[height=2cm]{../../templates/signature}\\Alexandra Seregely} % Your name used in the signature
+\setkomavar{frombank}{Raiffeisen Volksbank eG\\ BLZ: 285 622 97 \\ Konto: 444 101 000}
 
-\setkomavar{frombank}{Car Sharing Aurich e.V.; Amtsgericht Aurich Registerblatt VR 681\\
-Bankverbindung: Raiffeisen Volksbank eG; BLZ: 285 622 97; Konto: 444 101 000}
+\setkomavar{firstfoot}{%<- changed
+    \parbox[t]{\textwidth}{\footnotesize 
+\begingroup \raggedleft
+Seite \thepage{} von \pageref{LastPage}\\
+\endgroup
+    \begin{tabular}[t]{l@{}}
+         \multicolumn{1}{@{}l@{}}{Verein:}\\ 
+         Car Sharing Aurich e.V.
+    \end{tabular}
+     \hfill{}
+     \begin{tabular}[t]{l@{}}
+         \multicolumn{1}{@{}l@{}}{Rechtliche Informationen:}\\ 
+        Amtsgericht Aurich\\
+        Registerblatt VR 681\\
+     \end{tabular}
+     \hfill{}
+     \begin{tabular}[t]{l@{}}
+         \multicolumn{1}{@{}l@{}}{\usekomavar*{frombank}:}\\ 
+         \usekomavar{frombank} 
+     \end{tabular} 
+ }}
 
-\date{ ##settlementDate } % Date of the letter
+\pagestyle{headings}
+\setkomavar{nexthead}{%
+    \parbox[t]{\textwidth}{%\footnotesize
+        \begingroup \raggedright
+            Auflistung der Fahrten von ##firstName ##lastName
+        \endgroup
+    }
+}
+%\setkomavar{nextfoot}{\usekomavar{firstfoot}}
+\setkomavar{nextfoot}{%
+    \parbox[t]{\textwidth}{\footnotesize 
+        \begingroup \raggedleft
+            Seite \thepage{} von \pageref{LastPage}\\
+        \endgroup
+    }
+}
+\makeatletter
+\@addtoplength[-]{firstfootvpos}{\footskip}
+\makeatother
+%===================================
 
-%----------------------------------------------------------------------------------------
- 
+\setkomavar{subject}{\bf{Monatsabrechnung ##month ##year}}
+%\setkomavar{yourmail}[Ihre Angebots-Nr.]{2010122621}
+%\setkomavar{yourref}[Ihre Kundennummer]{262}
+\setkomavar{date}[]{ ##settlementDate }
+
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	ADDRESSEE
-%----------------------------------------------------------------------------------------
- 
-\begin{letter}{ ##firstName ##lastName \\ ##street ##streetNumber\\ ##postcode ##city } % Addressee name and address
+%===================================
+% receiver
+\begin{letter}{ ##firstName ##lastName \\ ##street ##streetNumber\\ ##postcode ##city } 
 
-%----------------------------------------------------------------------------------------
-%	LETTER CONTENT
-%---------------------------------------------------------------------------------------
-\setkomavar{subject}{\bf{Monatsabrechnung ##month ##year}}
-
+%===================================
 \opening{Moin,}
 
-im oben genannten Zeitraum haben Sie im Car Sharing Aurich e.V. als Mitglied die auf der/den nächsten Seite/n aufgeführten Fahrten zurückgelegt.
+im Monat ##month ##year haben Sie im Car Sharing Aurich e.V. als Mitglied die auf der/den nächsten Seite/n aufgeführten Fahrten zurückgelegt.
 
-Dabei ist der, auf der/den nächsten Seite/n aufgeführte, Aufwand entstanden, welcher von Ihrem Konto eingezogen wird.
+Dabei ist der auf der/den nächsten Seite/n aufgeführte Aufwand entstanden, welcher von Ihrem Konto eingezogen wird.
 
 \closing{Mit freundlichen Grüßen}
 
-%\setkomavar*{enclseparator}{Attached} % Change the default "encl:" to "Attached:"
-%\encl{Copyright permission form} % Attached documents
+%\setkomavar*{enclseparator}{Anlage} 
+%\encl{Fahrtenauflistung}
 
-
-%----------------------------------------------------------------------------------------
-
-\newpage
-\begin{tabular}{ | c | c | r | r | r | }
-\hline
-Datum & Fahrzeug & Dauer [h] & Distanz [km]& Kosten [\euro{}]\\ \hline
+%\newpage
+%\begin{tabular}{ | c | c | r | r | r | }
+%\hline
+%Datum & Fahrzeug & Dauer [h] & Distanz [km]& Kosten [\euro{}]\\ \hline
 ##table\\
-\hhline{|-|-|-|-|=|}
-\multicolumn{4}{|r|}{\bf{Summe:}} &\bf{##sum}\\\hline
-\end{tabular}
+%\hhline{|-|-|-|-|=|}
+%\multicolumn{4}{|r|}{\bf{Summe:}} &\bf{%#%#sum}\\\hline
+%\end{tabular}
 
 \end{letter}
-
 \end{document}

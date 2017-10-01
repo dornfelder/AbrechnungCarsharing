@@ -163,13 +163,13 @@ def formatGesamtauflistung(outData, toTemplateSums, uniqueDrivers):
                     rowCount = rowCount + 1
             #Beende die aktuelle Zeile als letzte Zeile eines Fahreres und gebe Summen an
             else:
-                    tmpStr = tmpStr + endLineLatexTable2 + '\n' \
-                        + '\\multicolumn{5}{|c|}{}' + delimiterLatexTable \
-                        + 'Summen:' + delimiterLatexTable \
-                        + '{:.2f}'.format( durationSum ) + delimiterLatexTable \
-                        + '{:.2f}'.format( distanceSum ) + delimiterLatexTable \
-                        + '{:.2f}'.format( toTemplateSums[driver] ) + endLineLatexTable3 + '\n'
-                    rowCount = rowCount + 2
+                tmpStr = tmpStr + endLineLatexTable2 + '\n' \
+                    + '\\multicolumn{5}{|c|}{}' + delimiterLatexTable \
+                    + 'Summen:' + delimiterLatexTable \
+                    + '{:.2f}'.format( durationSum ) + delimiterLatexTable \
+                    + '{:.2f}'.format( distanceSum ) + delimiterLatexTable \
+                    + '{:.2f}'.format( toTemplateSums[driver] ) + endLineLatexTable3 + '\n'
+                rowCount = rowCount + 2
             #Falls die aktuelle Tabelle laenger ist als die zulaessige Zeilenanzahl, beende die aktuelle Tabelle, beginne eine neue Seite und beginne eine neue Tabelle
             if maxRow <= rowCount:
                 tmpStr = tmpStr + tableEnd + newPage + tableBegin
@@ -179,20 +179,48 @@ def formatGesamtauflistung(outData, toTemplateSums, uniqueDrivers):
         tmpStr = tmpStr + tableEnd
     return tmpStr
 
-def formatOutData(tripList):
+def formatOutData(tripList, toTemplateSum):
+    #Maximale Anzahl Zeilen pro Seite der Gesamtauflistung
+    maxRow = 40
+    #Zaehler der Anzahl der Zeilen der aktuellen Seite
+    rowCount = 0
+    #Trennzeichen zwischen zwei Spalten der Latextabelle
     delimiterLatexTable = '&'
+    #Trennzeichen am Ende einer Latextabelle
     endLineLatexTable = r'\\\hline'
-    tmpStr = ''
+    #Beginn einer Tabelle in Latex
+    tableBegin = r'\newpage'+'\n' \
+        + r'\begin{tabular}{ | c | c | r | r | r | }'+'\n' \
+        + r'\hline'+'\n' \
+        + r'Datum & Fahrzeug & Dauer [h] & Distanz [km]& Kosten [\euro{}]\\ \hline' + '\n'
+    #Ende einer Tabelle in Latex ohne Summation
+    tableEndMid = r'\end{tabular}' + '\n'
+    #Ende einer Tabelle in Latex mit Summation
+    tableEndFinal = r'\\\hhline{|-|-|-|=|=|}'+'\n' \
+        + r'\multicolumn{4}{|r|}{\bf{Summe:}} &\bf{'+ '{:.2f}'.format(toTemplateSum) + r'}\\\hline'+ '\n' \
+        + r'\end{tabular}'
+    tmpStr = tableBegin
     lastIndex = len(tripList)-1
     for index,entry in enumerate(tripList):
+        rowCount = rowCount + 1
+        #Falls die aktuelle Tabelle laenger ist als die zulaessige Zeilenanzahl, beende die aktuelle Tabelle,
+        #beginne eine neue Seite und beginne eine neue Tabelle
+        if maxRow <= rowCount:
+            tmpStr = tmpStr + tableEndMid + tableBegin
+            rowCount = 0
+        #Schreibe eine Zeile
         tmpStr = tmpStr \
             + entry['begin'].strftime('%d.%m.%Y') + delimiterLatexTable \
             + entry['carName'].upper() + delimiterLatexTable \
             + '{:.2f}'.format( entry['duration'] )+ delimiterLatexTable \
             + '{:.2f}'.format( entry['distance'] )+ delimiterLatexTable \
             + '{:.2f}'.format( entry['cost'] )
+        #Beende die aktuelle Zeile als mittige Zeile
         if(index != lastIndex):
             tmpStr = tmpStr + endLineLatexTable + '\n'
+        #Beende die aktuelle Zeile als letzte Zeile des Fahreres und gebe Summen an
+        else:
+            tmpStr = tmpStr + tableEndFinal
     return tmpStr
 
 class cd:
@@ -365,14 +393,14 @@ for driver in uniqueDrivers:
     tmp['settlementDate'] = settlementDate
     tmp['month']    =   (gerMonthNames(month))
     tmp['year']     =   str(year)
-    tmp['sum']      =   '{:.2f}'.format(toTemplateSums[driver])
+    #tmp['sum']      =   '{:.2f}'.format(toTemplateSums[driver])
     tmp['firstName']=   driverData[driver]['firstName']
     tmp['lastName'] =   driverData[driver]['lastName']
     tmp['street'] =   driverData[driver]['street']
     tmp['streetNumber'] =   driverData[driver]['streetNumber']
     tmp['postcode'] =   driverData[driver]['postcode']
     tmp['city'] =   driverData[driver]['city']
-    tmp['table'] = formatOutData( outData[driver] )
+    tmp['table'] = formatOutData( outData[driver] , toTemplateSums[driver])
     #table data has to be added.
     toTemplate[driver] = tmp
 
