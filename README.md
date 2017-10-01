@@ -1,7 +1,7 @@
 # AbrechnungCarsharing
-How to use AbrechnungCarsharing:
+## How to use AbrechnungCarsharing:
 
-- Linux:  
+### Linux:  
   - Install Latex  
     - sudo apt-get install texlive texlive-lang-german texlive-doc-de texlive-latex-extra   
   - Install Python3  
@@ -20,7 +20,7 @@ How to use AbrechnungCarsharing:
       OR
     - python3 startAbrechnung.py
     
- - Windows:
+### Windows:
    - Install Latex
      - Download and install Miktex 2.9.6361 or newer and allow automatic installation of additional packages
    - Install Python3
