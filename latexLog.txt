@@ -218,7 +218,7 @@ Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
 
 Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 (scrkbase)                Font of page foot will also be changed on input line 
-23.
+20.
 
 No file Alex.aux.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
@@ -241,7 +241,7 @@ Foldmarks: yes
 Head of first page
 Foot of first page
 
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 93.
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
@@ -252,13 +252,13 @@ LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 93.
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 Location field: empty
 Title: no
@@ -275,7 +275,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 93.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 85.
 
 <../../templates/signature.png, id=1, 642.4pt x 401.5pt>
 <use ../../templates/signature.png> <use ../../templates/signature.png>
@@ -293,7 +293,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 115.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 103.
 
 
 Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
@@ -307,23 +307,20 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 115.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--120
+(scrlttr2)              by `\normalfont \bfseries ' on input line 103.
 
 
 Overfull \hbox (2.004pt too wide) has occurred while \output is active
 [] 
 
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 121.
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 106.
 
 
 Overfull \hbox (2.004pt too wide) has occurred while \output is active
 [] 
 [2]
 
-Package lastpage Warning: Rerun to get the references right on input line 122.
+Package lastpage Warning: Rerun to get the references right on input line 107.
 
 
 AED: lastpage setting LastPage
@@ -393,7 +390,7 @@ Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
 
 Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 (scrkbase)                Font of page foot will also be changed on input line 
-23.
+20.
 
 (./Alex.aux) (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
@@ -423,13 +420,13 @@ Foot of first page
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 Location field: empty
 Title: no
@@ -446,7 +443,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 93.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 85.
 
 <../../templates/signature.png, id=1, 642.4pt x 401.5pt>
 <use ../../templates/signature.png> <use ../../templates/signature.png>
@@ -464,7 +461,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 115.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 103.
 
 
 Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
@@ -478,10 +475,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 115.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--120
+(scrlttr2)              by `\normalfont \bfseries ' on input line 103.
 
 
 Overfull \hbox (2.004pt too wide) has occurred while \output is active
@@ -550,7 +544,7 @@ Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
 
 Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 (scrkbase)                Font of page foot will also be changed on input line 
-23.
+20.
 
 No file Julian.aux.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
@@ -573,7 +567,7 @@ Foldmarks: yes
 Head of first page
 Foot of first page
 
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 93.
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
@@ -584,13 +578,13 @@ LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 93.
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 Location field: empty
 Title: no
@@ -607,7 +601,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 93.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 85.
 
 <../../templates/signature.png, id=1, 642.4pt x 401.5pt>
 <use ../../templates/signature.png> <use ../../templates/signature.png>
@@ -616,7 +610,7 @@ e.png (PNG copy)>]
 Overfull \hbox (2.004pt too wide) has occurred while \output is active
 [] 
 
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 152.
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 140.
 
 
 Overfull \hbox (2.004pt too wide) has occurred while \output is active
@@ -634,7 +628,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 169.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 157.
 
 
 Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
@@ -648,23 +642,20 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 169.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--174
+(scrlttr2)              by `\normalfont \bfseries ' on input line 157.
 
 
 Overfull \hbox (2.004pt too wide) has occurred while \output is active
 [] 
 
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 175.
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 160.
 
 
 Overfull \hbox (2.004pt too wide) has occurred while \output is active
 [] 
 [3]
 
-Package lastpage Warning: Rerun to get the references right on input line 176.
+Package lastpage Warning: Rerun to get the references right on input line 161.
 
 
 AED: lastpage setting LastPage
@@ -734,7 +725,7 @@ Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
 
 Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 (scrkbase)                Font of page foot will also be changed on input line 
-23.
+20.
 
 (./Julian.aux) (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
@@ -764,13 +755,13 @@ Foot of first page
 (/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 93--93
+Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
 $[]$ 
 Location field: empty
 Title: no
@@ -787,7 +778,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 93.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 85.
 
 <../../templates/signature.png, id=1, 642.4pt x 401.5pt>
 <use ../../templates/signature.png> <use ../../templates/signature.png>
@@ -811,7 +802,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 169.
+(scrlttr2)              by `\normalfont \bfseries ' on input line 157.
 
 
 Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
@@ -825,10 +816,7 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              Note also, that KOMA-Script will remove the definition
 (scrlttr2)              of `\bf' anytime until release of about version 3.20.
 (scrlttr2)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrlttr2)              by `\normalfont \bfseries ' on input line 169.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--174
+(scrlttr2)              by `\normalfont \bfseries ' on input line 157.
 
 
 Overfull \hbox (2.004pt too wide) has occurred while \output is active

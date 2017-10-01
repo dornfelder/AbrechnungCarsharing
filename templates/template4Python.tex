@@ -8,13 +8,10 @@
     fromphone=false, fromfax=false,
     fromrule=false]{scrlttr2}
 
-
 \usepackage[ngerman]{babel}% <- use this instead package ngerman
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{stix} % Use the Stix font by default
-%\usepackage{textcomp}
-%\usepackage{longtable}
 \usepackage{eurosym}
 \usepackage{hhline}
 \usepackage{graphicx}
@@ -22,11 +19,8 @@
 
 \setkomafont{pagehead}{\normalfont\normalcolor}
 
-%\LoadLetterOption{template}% <- we do not have your lco file
 \renewcommand*{\raggedsignature}{\raggedright} % Stop the signature from indenting
 
-%----------------------------------------------------------------------------------------
-%	YOUR INFORMATION AND LETTER DATE
 %----------------------------------------------------------------------------------------
 
 \setkomavar{fromname}{Car Sharing Aurich e.V.\\ Torsten Hoffmann}
@@ -65,6 +59,7 @@ Seite \thepage{} von \pageref{LastPage}\\
         \endgroup
     }
 }
+
 %\setkomavar{nextfoot}{\usekomavar{firstfoot}}
 \setkomavar{nextfoot}{%
     \parbox[t]{\textwidth}{\footnotesize 
@@ -85,11 +80,8 @@ Seite \thepage{} von \pageref{LastPage}\\
 
 \begin{document}
 
-%===================================
-% receiver
 \begin{letter}{ ##firstName ##lastName \\ ##street ##streetNumber\\ ##postcode ##city } 
 
-%===================================
 \opening{Moin,}
 
 im Monat ##month ##year haben Sie im Car Sharing Aurich e.V. als Mitglied die auf der/den nächsten Seite/n aufgeführten Fahrten zurückgelegt.
@@ -101,14 +93,7 @@ Dabei ist der auf der/den nächsten Seite/n aufgeführte Aufwand entstanden, wel
 %\setkomavar*{enclseparator}{Anlage} 
 %\encl{Fahrtenauflistung}
 
-%\newpage
-%\begin{tabular}{ | c | c | r | r | r | }
-%\hline
-%Datum & Fahrzeug & Dauer [h] & Distanz [km]& Kosten [\euro{}]\\ \hline
-##table\\
-%\hhline{|-|-|-|-|=|}
-%\multicolumn{4}{|r|}{\bf{Summe:}} &\bf{%#%#sum}\\\hline
-%\end{tabular}
+##table
 
 \end{letter}
 \end{document}
