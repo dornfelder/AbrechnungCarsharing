@@ -21,9 +21,9 @@ import locale
 #6  Fuehre dieses Skript aus.
 
 #Gebe das Jahr des zu bearbeitenden Monats ein
-year = 2017
+year = 2000
 #Gebe den zu bearbeitenden Monat ein
-month = 6
+month = 1
 #Soll das Erstelldatum der Abrechnung automatisch erstellt werden?
 automatischesDatum = True #True oder False
 
