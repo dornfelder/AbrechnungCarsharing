@@ -379,10 +379,10 @@ toFileLatex = latexTemplate(templateStr)
 
 print('Erstelle PDF Gesamtauflistung')
 #Erstelle die Ausgabedateien (pdf)
-dateiName = 'Gesamtauflistung'
+fileNameSummary = 'Gesamtauflistung'
 #Oeffne eine Logdatei fuer die Ausgabe der Latexbefehle
 with open(os.path.join( os.getcwd(),fileNameLatexLog), 'w') as latexLogFile:
-    fileName = os.path.join(os.getcwd(), outDir ,dateiName+'.tex' )
+    fileName = os.path.join(os.getcwd(), outDir ,'{}_{}_{}.tex'.format( str(year), str(month).zfill(2), fileNameSummary ) )
     with open( fileName , 'w' ,newline = '\n') as myFile:
         myFile.write(toFileLatex.substitute(**toTemplate))
     with cd( os.path.join(os.getcwd(), outDir) ):
@@ -391,7 +391,7 @@ with open(os.path.join( os.getcwd(),fileNameLatexLog), 'w') as latexLogFile:
             proc = subprocess.Popen(cmd, stdout=latexLogFile)
             out = proc.communicate()
         for ending in uselessFilesEndings:
-            os.unlink('{}{}'.format(dateiName,ending))
+            os.unlink(os.path.splitext(fileName)[0] + ending)
 
 ######################################
 #Erstelle die Abrechnungen der einzelnen Fahrer
@@ -412,9 +412,9 @@ for driver in uniqueDrivers:
     tmp['table'],tmp['multiplePagesBool']  = formatOutData( outData[driver] , toTemplateSums[driver])
     #Fallunterscheidung "der/den nächsten Seite/n"
     if tmp['multiplePagesBool'] :
-        tmp['pages'] = 'den nächsten Seiten'
+        tmp['pages'] = 'den n\"achsten Seiten'
     else:
-        tmp['pages'] = 'der nächsten Seite'
+        tmp['pages'] = 'der n\"achsten Seite'
     #table data has to be added.
     toTemplate[driver] = tmp
 
@@ -433,7 +433,7 @@ print('Erstelle PDF fuer Fahrer:')
 with open(os.path.join( os.getcwd(),fileNameLatexLog), 'a') as latexLogFile:
     for driver in uniqueDrivers:
         print('\t'+driver)
-        fileName = os.path.join(os.getcwd(), outDir ,'{}.tex'.format( driver ) )
+        fileName = os.path.join(os.getcwd(), outDir ,'{}_{}_{}.tex'.format( str(year), str(month).zfill(2), driver ) )
         with open( fileName , 'w' ,newline = '\n') as myFile:
             myFile.write(toFileLatex.substitute(**toTemplate[driver]))
         with cd( os.path.join(os.getcwd(), outDir) ):
@@ -442,7 +442,7 @@ with open(os.path.join( os.getcwd(),fileNameLatexLog), 'a') as latexLogFile:
                 proc = subprocess.Popen(cmd, stdout=latexLogFile)
                 out = proc.communicate()
             for ending in uselessFilesEndings:
-                os.unlink('{}{}'.format(driver,ending))
+                os.unlink(os.path.splitext(fileName)[0] + ending)
 
 #Warte auf Nutzereingabe um Kommandofenster zu schliessen
 input("\nDruecke ENTER um dieses Fenster zu schliessen.")
