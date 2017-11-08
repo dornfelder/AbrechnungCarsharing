@@ -13,20 +13,20 @@ def processOneSingleMonth(year, month, automaticDate, settlementDate):
 
     #Gebe den Namen eines Verzeichnisses an, das die Fahrdaten der einzelnen Autos beinhaltet
     # Die Dateinamen ohen Dateiendung in diesem Verzeichnis werden als Bezeichner der Autos in der Abrechnung verwendet.
-    inputDirectory = 'input/{}_{}'.format( str(year), str(month).zfill(2))
+    inputDirectory = os.path.join('input','{}_{}'.format( str(year), str(month).zfill(2)))
     print('Das Eingabeverzeichnis lautet \n"{}"'.format(inputDirectory) )
     #Gebe eine Dateiendung ein, die alle Dateien mit Fahrtinformationen im Inputverzeichnis tragen.
     fileEnding = '.txt'
     #Gebe den Namen des Ausgabeverzeichnisses an
-    outputDirectory = 'output/{}_{}'.format( str(year), str(month).zfill(2))
+    outputDirectory = os.path.join('output','{}_{}'.format( str(year), str(month).zfill(2)))
     #Gebe den Namen einer Latex-Logdatei an, die im Ausgabeverzeichnis erstellt wird
     fileNameLatexLog = 'latexLog.txt'
     #Gebe den Namen des Fahrerverzeichnisses ein
     fileNameDriverDirectory = 'fahrerverzeichnis.txt'
     #Gebe den Namen der Latexvorlage ein
-    fileNameLatexTemplate = './templates/template4Python.tex'
+    fileNameLatexTemplate = os.path.join('templates','template4Python.tex')
     #Gebe den Namen der Latexvorlage fuer die Gesamtauflistung ein
-    fileNameLatexTemplateGesamtauflistung = './templates/template4PythonGesamtauflistung.tex'
+    fileNameLatexTemplateGesamtauflistung = os.path.join('templates','template4PythonGesamtauflistung.tex')
 
     #Erstelle das Erstelldatum der Abrechnung automatisch
     if automaticDate:
