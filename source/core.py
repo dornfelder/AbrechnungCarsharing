@@ -367,7 +367,10 @@ def processOneSingleMonth(year, month, automaticDate, settlementDate):
                 proc = subprocess.Popen(cmd, stdout=latexLogFile)
                 out = proc.communicate()
             for ending in uselessFilesEndings:
-                os.unlink(os.path.splitext(fileName)[0] + ending)
+                try:
+                    os.unlink(os.path.splitext(fileName)[0] + ending)
+                except:
+                    pass
 
     ######################################
     #Erstelle die Abrechnungen der einzelnen Fahrer
@@ -418,5 +421,8 @@ def processOneSingleMonth(year, month, automaticDate, settlementDate):
                     proc = subprocess.Popen(cmd, stdout=latexLogFile)
                     out = proc.communicate()
                 for ending in uselessFilesEndings:
-                    os.unlink(os.path.splitext(fileName)[0] + ending)
+                    try:
+                        os.unlink(os.path.splitext(fileName)[0] + ending)
+                    except:
+                        pass
 
