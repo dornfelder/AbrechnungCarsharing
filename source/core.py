@@ -48,19 +48,24 @@ def processOneSingleMonth(year, month, automaticDate, settlementDate):
     def calculateCost( distance , duration):
         #[distance] = km
         #[duration] = h
-        #Es gibt zwei Kilometerpreise. rate_1 gilt bis zu einer Fahrtstrecke 
+        #Es gibt drei Kilometerpreise. rate_1 gilt bis zu einer Fahrtstrecke 
         #von distanceForRate1, danach gilt rate_2
-        rate_1 = 0.5   #[Euro / km]
-        rate_2 = 0.25  #[Euro / km]
-        distanceForRate1 = 139  #[km]
+        rate_1 = 0.5    #[Euro / km]
+        rate_2 = 0.28   #[Euro / km]
+        rate_3 = 0.23   #[Euro / km]
+        distanceForRate1 = 50  #[km]
+        distanceForRate2 = 100 #[km]
         #Ab einer Zeitdauer von highDuration gibt es einen Mindestpreis, 
         #der sich aus einer Mindeststrecke highDurationDistance berechnet.
         highDuration = 24 #[h]
         highDurationDistance = 50 #[km]
         if(distance <= distanceForRate1):
             tmp = distance * rate_1
-        else:
+        elif(distance <= distanceForRate2):
             tmp = distanceForRate1 * rate_1 + (distance - distanceForRate1) * rate_2
+        else:
+            tmp = distanceForRate1 * rate_1 + (distanceForRate2 - distanceForRate1) * rate_2 +\
+            + (distance - distanceForRate2) * rate_3
         if(highDuration <= duration):
             tmp = max( [tmp , highDurationDistance * rate_1] )
         return tmp
