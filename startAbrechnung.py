@@ -391,7 +391,10 @@ with open(os.path.join( os.getcwd(),fileNameLatexLog), 'w') as latexLogFile:
             proc = subprocess.Popen(cmd, stdout=latexLogFile)
             out = proc.communicate()
         for ending in uselessFilesEndings:
-            os.unlink(os.path.splitext(fileName)[0] + ending)
+            try:
+                os.unlink(os.path.splitext(fileName)[0] + ending)
+            except:
+                pass
 
 ######################################
 #Erstelle die Abrechnungen der einzelnen Fahrer
@@ -442,7 +445,10 @@ with open(os.path.join( os.getcwd(),fileNameLatexLog), 'a') as latexLogFile:
                 proc = subprocess.Popen(cmd, stdout=latexLogFile)
                 out = proc.communicate()
             for ending in uselessFilesEndings:
-                os.unlink(os.path.splitext(fileName)[0] + ending)
+                try:
+                    os.unlink(os.path.splitext(fileName)[0] + ending)
+                except:
+                    pass
 
 #Warte auf Nutzereingabe um Kommandofenster zu schliessen
 input("\nDruecke ENTER um dieses Fenster zu schliessen.")

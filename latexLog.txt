@@ -1,9 +1,7 @@
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-
-(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2000_01/2000_01_Gesamtauf
-listung.tex
+(/home/me/Dropbox/git/car/output/2000_01/2000_01_Gesamtauflistung.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -16,10 +14,6 @@ Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
-(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
@@ -42,10 +36,6 @@ Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty)
 No file 2000_01_Gesamtauflistung.aux.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
@@ -59,13 +49,6 @@ No file 2000_01_Gesamtauflistung.aux.
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 
 Package lastpage Warning: Rerun to get the references right on input line 131.
 
@@ -85,18 +68,15 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
- ){/usr/share/texlive/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}</usr/share/t
-exlive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Bold.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on 2000_01_Gesamtauflistung.pdf (2 pages, 85700 bytes).
+ ) </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/me/.
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk></usr/share/texlive/texmf-
+dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on 2000_01_Gesamtauflistung.pdf (2 pages, 29181 bytes).
 Transcript written on 2000_01_Gesamtauflistung.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-
-(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2000_01/2000_01_Gesamtauf
-listung.tex
+(/home/me/Dropbox/git/car/output/2000_01/2000_01_Gesamtauflistung.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -109,10 +89,6 @@ Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
-(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
@@ -135,10 +111,6 @@ Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty)
 (./2000_01_Gesamtauflistung.aux)
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
@@ -152,26 +124,18 @@ Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 
 AED: lastpage setting LastPage
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-(./2000_01_Gesamtauflistung.aux) ){/usr/share/texlive/texmf-dist/fonts/enc/dvip
-s/stix/stix-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/stix/STIXG
-eneral-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/eurosym/fe
-ymr10.pfb>
-Output written on 2000_01_Gesamtauflistung.pdf (2 pages, 63062 bytes).
+(./2000_01_Gesamtauflistung.aux) ) </home/me/.texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecrm1095.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/eurosym/f
+eymr10.pfb>
+Output written on 2000_01_Gesamtauflistung.pdf (2 pages, 28785 bytes).
 Transcript written on 2000_01_Gesamtauflistung.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2000_01/2000_01_Alex.tex
+(/home/me/Dropbox/git/car/output/2000_01/2000_01_Alex.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlttr2.cls
@@ -201,10 +165,6 @@ Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
-(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -221,10 +181,6 @@ Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 20.
 
 No file 2000_01_Alex.aux.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
@@ -243,13 +199,6 @@ Foot of first page
 
 LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 85.
 
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
 Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
@@ -310,13 +259,13 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              by `\normalfont \bfseries ' on input line 103.
 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 
 LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 106.
 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 [2]
 
@@ -332,18 +281,18 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
-(see the transcript file for additional information) </home/julian/.texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecss0800.600pk>{/usr/share/texlive/texmf-dist/fonts/
-enc/dvips/stix/stix-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/st
-ix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/
-STIXGeneral-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/euros
-ym/feymr10.pfb>
-Output written on 2000_01_Alex.pdf (2 pages, 198158 bytes).
+(see the transcript file for additional information) </home/me/.texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecss0800.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
+000.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </h
+ome/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></usr/share/texliv
+e/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on 2000_01_Alex.pdf (2 pages, 147696 bytes).
 Transcript written on 2000_01_Alex.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2000_01/2000_01_Alex.tex
+(/home/me/Dropbox/git/car/output/2000_01/2000_01_Alex.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlttr2.cls
@@ -373,10 +322,6 @@ Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
-(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -392,10 +337,7 @@ Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 (scrkbase)                Font of page foot will also be changed on input line 
 20.
 
-(./2000_01_Alex.aux) (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
+(./2000_01_Alex.aux)
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
@@ -411,13 +353,6 @@ Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 Foldmarks: yes
 Head of first page
 Foot of first page
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
 Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
@@ -478,28 +413,25 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              by `\normalfont \bfseries ' on input line 103.
 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 [2] 
 AED: lastpage setting LastPage
 (./2000_01_Alex.aux) )
-(see the transcript file for additional information){/usr/share/texlive/texmf-d
-ist/fonts/enc/dvips/stix/stix-t1.enc} </home/julian/.texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecss0800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/st
-ix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/
-STIXGeneral-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/euros
-ym/feymr10.pfb>
-Output written on 2000_01_Alex.pdf (2 pages, 197946 bytes).
+(see the transcript file for additional information) </home/me/.texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecss0800.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1
+000.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></us
+r/share/texlive/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on 2000_01_Alex.pdf (2 pages, 147309 bytes).
 Transcript written on 2000_01_Alex.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-
-(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2000_01/2000_01_Julian.te
-x
+(/home/me/Dropbox/git/car/output/2000_01/2000_01_Julian.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlttr2.cls
@@ -529,10 +461,6 @@ Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
-(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -549,10 +477,6 @@ Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 20.
 
 No file 2000_01_Julian.aux.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
@@ -571,13 +495,6 @@ Foot of first page
 
 LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 85.
 
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
 Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
@@ -609,13 +526,13 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 <use ../../templates/signature.png> <use ../../templates/signature.png>
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../templates/signatur
 e.png (PNG copy)>]
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 
 LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 140.
 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 [2]
 
@@ -647,13 +564,13 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              by `\normalfont \bfseries ' on input line 157.
 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 
 LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 160.
 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 [3]
 
@@ -669,20 +586,18 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
-(see the transcript file for additional information) </home/julian/.texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecss0800.600pk>{/usr/share/texlive/texmf-dist/fonts/
-enc/dvips/stix/stix-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/st
-ix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/
-STIXGeneral-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/euros
-ym/feymr10.pfb>
-Output written on 2000_01_Julian.pdf (3 pages, 201417 bytes).
+(see the transcript file for additional information) </home/me/.texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecss0800.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
+000.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </h
+ome/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></usr/share/texliv
+e/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on 2000_01_Julian.pdf (3 pages, 151494 bytes).
 Transcript written on 2000_01_Julian.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-
-(/home/julian/Dropbox/git/AbrechnungCarsharing/output/2000_01/2000_01_Julian.te
-x
+(/home/me/Dropbox/git/car/output/2000_01/2000_01_Julian.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlttr2.cls
@@ -712,10 +627,6 @@ Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu)))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
-(/usr/share/texlive/texmf-dist/tex/latex/stix/stix.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu))))
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -731,10 +642,7 @@ Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 (scrkbase)                Font of page foot will also be changed on input line 
 20.
 
-(./2000_01_Julian.aux) (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stix.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/t1stix.fd)
+(./2000_01_Julian.aux)
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
@@ -750,13 +658,6 @@ Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 Foldmarks: yes
 Head of first page
 Foot of first page
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixscr.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixex.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixfrak.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixbb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixcal.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls1stixsf.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/stix/ls2stixtt.fd)
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
 Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
@@ -788,10 +689,10 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 <use ../../templates/signature.png> <use ../../templates/signature.png>
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <../../templates/signatur
 e.png (PNG copy)>]
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 [2]
 
@@ -823,19 +724,18 @@ Class scrlttr2 Warning: Usage of deprecated font command `\bf'!
 (scrlttr2)              by `\normalfont \bfseries ' on input line 157.
 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 
-Overfull \hbox (2.004pt too wide) has occurred while \output is active
+Overfull \hbox (2.61049pt too wide) has occurred while \output is active
 [] 
 [3] 
 AED: lastpage setting LastPage
 (./2000_01_Julian.aux) )
-(see the transcript file for additional information){/usr/share/texlive/texmf-d
-ist/fonts/enc/dvips/stix/stix-t1.enc} </home/julian/.texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecss0800.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/st
-ix/STIXGeneral-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stix/
-STIXGeneral-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/euros
-ym/feymr10.pfb>
-Output written on 2000_01_Julian.pdf (3 pages, 201222 bytes).
+(see the transcript file for additional information) </home/me/.texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecss0800.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1
+000.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></us
+r/share/texlive/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on 2000_01_Julian.pdf (3 pages, 151096 bytes).
 Transcript written on 2000_01_Julian.log.
