@@ -4,8 +4,8 @@
 ### Linux:  
   - Install Latex  
     - sudo apt-get install texlive texlive-lang-german texlive-doc-de texlive-latex-extra   
-  - Install Python3  
-    - sudo apt-get install python3   
+  - Install Python3.4  
+    - sudo apt-get install python3.4   
   - Clone this directory  
   - Navigate to the cloned directory  
   - Make changes using a texteditor:  
@@ -23,8 +23,8 @@
 ### Windows:
    - Install Latex
      - Download and install Miktex 2.9.6361 or newer and allow automatic installation of additional packages
-   - Install Python3
-     - Install miniconda 3.
+   - Install Python3.4
+     - Install miniconda 3.4
      - Install iPython-Terminal
        - Start anaconda-command-line and type
          - conda install ipython
