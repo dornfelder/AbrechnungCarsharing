@@ -201,13 +201,13 @@ LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 85.
 
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 Location field: empty
 Title: no
@@ -287,7 +287,7 @@ appen/ec/ecss0800.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
 000.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </h
 ome/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></usr/share/texliv
 e/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on 2000_01_Alex.pdf (2 pages, 147696 bytes).
+Output written on 2000_01_Alex.pdf (2 pages, 147487 bytes).
 Transcript written on 2000_01_Alex.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -355,13 +355,13 @@ Head of first page
 Foot of first page
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 Location field: empty
 Title: no
@@ -426,7 +426,7 @@ AED: lastpage setting LastPage
 appen/ec/ecss0800.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1
 000.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></us
 r/share/texlive/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on 2000_01_Alex.pdf (2 pages, 147309 bytes).
+Output written on 2000_01_Alex.pdf (2 pages, 147100 bytes).
 Transcript written on 2000_01_Alex.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -497,13 +497,13 @@ LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 85.
 
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 Location field: empty
 Title: no
@@ -592,7 +592,7 @@ appen/ec/ecss0800.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
 000.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </h
 ome/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></usr/share/texliv
 e/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on 2000_01_Julian.pdf (3 pages, 151494 bytes).
+Output written on 2000_01_Julian.pdf (3 pages, 151296 bytes).
 Transcript written on 2000_01_Julian.log.
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -660,13 +660,13 @@ Head of first page
 Foot of first page
 Address (backaddress, addressee)
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd)
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 
-Overfull \hbox (9.82068pt too wide) in paragraph at lines 85--85
+Overfull \hbox (48.11688pt too wide) in paragraph at lines 85--85
 $[]$ 
 Location field: empty
 Title: no
@@ -737,5 +737,5 @@ AED: lastpage setting LastPage
 appen/ec/ecss0800.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1
 000.600pk> </home/me/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></us
 r/share/texlive/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on 2000_01_Julian.pdf (3 pages, 151096 bytes).
+Output written on 2000_01_Julian.pdf (3 pages, 150907 bytes).
 Transcript written on 2000_01_Julian.log.
